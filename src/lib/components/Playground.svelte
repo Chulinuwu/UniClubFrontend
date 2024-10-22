@@ -5,7 +5,7 @@
 
 <section class="p-10">
     <div class="font-bold text-xl">
-        PlayGround
+        PlayGround (CEDT Sandbox)
     </div>
 
 </section>
