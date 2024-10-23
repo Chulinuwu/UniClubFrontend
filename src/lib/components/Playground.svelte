@@ -35,12 +35,12 @@
 		<div class="text-uni-red">Icon</div>
 		<div class="w-full h-1 bg-uni-red"></div>
 		<div class="flex flex-wrap gap-5">
-			<img src={home} alt="home">
-			<img src={edit} alt="edit">
-			<img src={storkeheart} alt="strokeheart">
-			<img src={fullheart} alt="fullheart">
-			<img src={notification} alt="notification">
-			<img src={search} alt="search">
+			<img src={home} alt="home" />
+			<img src={edit} alt="edit" />
+			<img src={storkeheart} alt="strokeheart" />
+			<img src={fullheart} alt="fullheart" />
+			<img src={notification} alt="notification" />
+			<img src={search} alt="search" />
 		</div>
 	</section>
 </section>
