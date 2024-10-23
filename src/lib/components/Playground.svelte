@@ -10,7 +10,7 @@
 	import search from '../icon/search.svg';
 	import Topnavbar from './Topnavbar.svelte';
 	import ClubNavbar from './ClubNavbar.svelte';
-
+	import ProfileNavbar from './profileNavbar.svelte';
 
 	let x = 0;
 	function handlebuttonclick() {
@@ -21,6 +21,7 @@
 <div>
 	<Topnavbar/>
 	<!-- <ClubNavbar/> -->
+	 <ProfileNavbar/>
 <section class="p-10 ">
 	<div class="w-full justify-center flex h-[100px] mt-[200px]"><img src={uniclub} alt="uniclub" /></div>
 	<div class="font-semibold text-xl mt-10 w-full flex justify-center text-uni-red">
