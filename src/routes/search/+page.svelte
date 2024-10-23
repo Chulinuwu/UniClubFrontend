@@ -6,6 +6,7 @@
     import SearchBar from '$lib/components/searchBar.svelte';
     import TabCapsule from '$lib/components/tabCapsule.svelte';
     import  Clubcard from "$lib/components/clubCard.svelte"
+    import filterIcon from "$lib/icon/filter.svg";
 
     let searchValue = '';
     let selectedTabs: string[] = [];
@@ -35,8 +36,11 @@
 <div class="w-full h-full">
 
 
-    <div class="p-4 flex w-full">
+    <div class="p-4 flex w-full justify-between fixed bg-white items-center gap-5">
         <SearchBar bind:value={searchValue} />
+        <div class="w-[32px]">
+            <img src={filterIcon} alt="filter">
+        </div>
         <!-- <div class="text-uni-red">Capsule Filter</div>
         <div class="w-full h-1 bg-uni-red"></div>
         <div class="flex flex-wrap items-center gap-2">
@@ -51,7 +55,8 @@
         {/if} -->
     </div>
 
-    <div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
+    <div class="w-full h-[104px]"></div>
+    <div class="p-5 gap-[10px]  flex flex-col w-full items-center mb-[100px]">
         {#each filteredMemos as memo}
     <Clubcard name={memo.name} quote={memo.header} imageURL={memo.imageURL}/>
         {/each}
