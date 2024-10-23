@@ -1,10 +1,15 @@
 <script lang="ts">
+    import ClubNavbar from '$lib/components/ClubNavbar.svelte';
     export let data;
     const { club } = data;
-  </script>
+</script>
+
+<ClubNavbar />
   
   {#if club}
-    <div class="w-full h-full flex flex-col items-center justify-center space-y-6 p-8">
+    <div class="w-full h-full flex flex-col items-center justify-center space-y-6">
+        <div class="flex w-full h-[100px] bg-slate-300"></div>
+        <div class="flex w-full h-[256px] bg-slate-200"></div>
       <h1 class="text-4xl font-bold">{club.name}</h1>
       <img src={club.imageURL} alt="{club.name}" class="w-64 h-64 object-cover rounded-lg" />
       <p class="text-lg">{club.header}</p>
