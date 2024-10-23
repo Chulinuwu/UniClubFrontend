@@ -12,7 +12,7 @@
         <div class="w-full h-full justify-center flex flex-col gap-2 mt-5">
         <Placeholder inputName="Email" />
         <Placeholder inputName="Password" />
-        <a href="/login2" class="w-full h-full"> <Button buttonName="Login" class="" /></a>
+        <a href="/dashboard" class="w-full h-full"> <Button buttonName="Login" class="" /></a>
         <p class="text-uni-red w-full text-center">Forgot Password?</p>
     </div>
 
