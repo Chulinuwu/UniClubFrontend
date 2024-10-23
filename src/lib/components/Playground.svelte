@@ -67,6 +67,8 @@
 			</div>
 		</section>
 
+
+		<!-- If you want to make it as square / you show add class 'rounded p-2' if you want shadow use 'shadow-md' -->
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Profile icon</div>
 			<div class="w-full h-1 bg-uni-red"></div>
@@ -77,5 +79,7 @@
 				<ProfileIcon imageURL={profile3} class="border w-[50px] h-[50px] border-uni-graybox" />
 			</div>
 		</section>
+
+
 	</section>
 </div>
