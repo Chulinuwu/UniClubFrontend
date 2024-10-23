@@ -58,13 +58,17 @@
 		{#if showProfileIcon}
 			<Profile
 				imageURL={profile1}
-				class="w-auto h-auto max-w-[25px] rounded-full {showProfileIcon ? 'border border-uni-red' : ''}"
+				class="w-auto h-auto max-w-[25px] rounded-full {showProfileIcon
+					? 'border border-uni-red'
+					: ''}"
 			/>
 		{:else}
 			<a href="/profile">
 				<Profile
 					imageURL={profile1}
-					class="w-auto h-auto  max-w-[25px] rounded-full {showProfileIcon ? 'border border-uni-red' : ''}"
+					class="w-auto h-auto  max-w-[25px] rounded-full {showProfileIcon
+						? 'border border-uni-red'
+						: ''}"
 				/>
 			</a>
 		{/if}

@@ -11,6 +11,7 @@
 	import MemberCard from './memberCard.svelte';
 	import TabCapsule from './tabCapsule.svelte';
 	import BottomNavbar from './bottomNavbar.svelte';
+	import SliderBanner from './SliderBanner.svelte';
 
 	import clubIcon from '../icon/clubicon.svg';
 	import home from './../icon/homeicon.svg';
@@ -24,6 +25,11 @@
 	import profile2 from '../images/profile2.jpg';
 	import profile3 from '../images/profile3.jpg';
 	import profile4 from '../images/profile4.jpg';
+	import img1 from '../images/imageSlider1.png';
+	import img2 from '../images/imageSlider2.png';
+	import img3 from '../images/imageSlider3.png';
+
+	let images = [img1, img2, img3];
 
 	let x = 0;
 	function handlebuttonclick() {
@@ -56,6 +62,7 @@
 <div class="max-w-[100vw]">
 	<!-- <Topnavbar/> -->
 	<ClubNavbar />
+	<SliderBanner {images} />
 	<!-- <ProfileNavbar/> -->
 	<section class="p-10 mb-[100px]">
 		<div class="w-full justify-center flex h-[100px] mt-[100px]">
@@ -197,5 +204,5 @@
 			</div>
 		</section>
 	</section>
-	<BottomNavbar/>
+	<BottomNavbar />
 </div>

@@ -8,7 +8,9 @@
 		<img src={Uniclublogo} alt="Uniclub" class="w-[200px]" />
 		<p class="text-2xl font-bold">Welcome to UniClub !</p>
 		<p class="text-base text-uni-graytext">All club, One place</p>
-		<a href="/login2" class="w-full h-full"> <Button buttonName="Login with CU Account" class="mt-5" /></a>
+		<a href="/login2" class="w-full h-full">
+			<Button buttonName="Login with CU Account" class="mt-5" /></a
+		>
 		<a href="/login2" class="w-full h-full"> <Button buttonName="Login with Google Account" /></a>
 	</div>
 	<div class=" w-full h-[100px] absolute bottom-0 flex justify-center items-center">
