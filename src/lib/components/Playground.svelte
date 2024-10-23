@@ -8,6 +8,11 @@
 	import fullheart from '../icon/fullheart.svg';
 	import notification from '../icon/notification.svg';
 	import search from '../icon/search.svg';
+
+	let x = 0;
+	function handlebuttonclick() {
+		x++;
+	}
 </script>
 
 <section class="p-10">
@@ -22,7 +27,10 @@
 	<section class="text-2xl mt-10 flex flex-col gap-6">
 		<div class="text-uni-red">Button</div>
 		<div class="w-full h-1 bg-uni-red"></div>
-		<Button buttonName="Click Me" />
+		<div>
+			<Button buttonName="Click Me" on:click={handlebuttonclick} />
+			<p>button clicked {x} time</p>
+		</div>
 	</section>
 
 	<section class="text-2xl mt-10 flex flex-col gap-6">
@@ -43,4 +51,5 @@
 			<img src={search} alt="search" />
 		</div>
 	</section>
+
 </section>
