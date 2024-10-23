@@ -13,7 +13,7 @@
 </script>
 
 <div class="w-full h-full">
-	<Topnavbar />
+	<Topnavbar  />
 	<SliderBanner {images} />
 	<div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
 		{#each memos as memo}

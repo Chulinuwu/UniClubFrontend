@@ -32,9 +32,10 @@
 </script>
 
 <div>
-	<div class="relative flex w-full h-[256px]">
+	<div class="w-full h-[100px]"></div>
+	<div class="relative flex w-full h-[256px] ">
 		<button
-			class="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer transition-all"
+			class="absolute left-5 top-1/2 transform -translate-y-1/2  cursor-pointer transition-all"
 			on:click={handleLeftClick}
 		>
 			<img src={LeftArrow} alt="Left Arrow" />
@@ -49,7 +50,7 @@
 			{/each}
 		</div>
 		<button
-			class="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer transition-all"
+			class="absolute right-5 top-1/2  transform -translate-y-1/2 z-10 cursor-pointer transition-all"
 			on:click={handleRightClick}
 		>
 			<img src={RightArrow} alt="Right Arrow" />
@@ -57,12 +58,12 @@
 	</div>
 	<div class="flex justify-center space-x-2 mt-3">
 		{#each images as _, index}
-			<div
+			<button
 				class="w-1.5 h-1.5 rounded-full cursor-pointer transition-all"
 				class:bg-uni-red={index === currentIndex}
 				class:bg-uni-graytext2={index !== currentIndex}
 				on:click={() => goToSlide(index)}
-			></div>
+			></button>
 		{/each}
 	</div>
 </div>
