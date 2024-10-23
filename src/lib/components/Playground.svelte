@@ -2,6 +2,12 @@
 	import uniclub from '$lib/images/Uniclub.png';
 	import Button from './button.svelte';
 	import Placeholder from './placeholder.svelte';
+	import home from './../icon/homeicon.svg';
+	import edit from '../icon/edit.svg';
+	import storkeheart from '../icon/strokeheart.svg';
+	import fullheart from '../icon/fullheart.svg';
+	import notification from '../icon/notification.svg';
+	import search from '../icon/search.svg';
 </script>
 
 <section class="p-10">
@@ -23,5 +29,18 @@
 		<div class="text-uni-red">Placeholder</div>
 		<div class="w-full h-1 bg-uni-red"></div>
 		<Placeholder inputName="Type me" />
+	</section>
+
+	<section class="text-2xl mt-10 flex flex-col gap-6">
+		<div class="text-uni-red">Icon</div>
+		<div class="w-full h-1 bg-uni-red"></div>
+		<div class="flex flex-wrap gap-5">
+			<img src={home} alt="home">
+			<img src={edit} alt="edit">
+			<img src={storkeheart} alt="strokeheart">
+			<img src={fullheart} alt="fullheart">
+			<img src={notification} alt="notification">
+			<img src={search} alt="search">
+		</div>
 	</section>
 </section>
