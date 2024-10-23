@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import Button from './button.svelte';
 	import Placeholder from './placeholder.svelte';
 	// import Topnavbar from './Topnavbar.svelte';
@@ -9,6 +9,7 @@
 	import ClubCard from './clubCard.svelte';
 	import FeedCard from './feedCard.svelte';
 	import MemberCard from './memberCard.svelte';
+	import TabCapsule from './tabCapsule.svelte';
 
 	import clubIcon from '../icon/clubicon.svg'
 	import home from './../icon/homeicon.svg';
@@ -33,6 +34,23 @@
 
 	// Computed property to filter clubs based on searchValue
 	$: filteredClubs = clubs.filter((club) => club.toLowerCase().includes(searchValue.toLowerCase()));
+
+
+	let selectedTabs: string[] = [];
+	let tabs = [
+		{ label: 'Sport', active: false },
+		{ label: 'Science', active: false },
+		{ label: 'Math', active: false },
+		{ label: 'Art', active: false },
+	];
+
+	function toggle(index: number) {
+		tabs = tabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
+		const tab = tabs[index];
+		selectedTabs = tab.active
+			? [...selectedTabs, tab.label]
+			: selectedTabs.filter((label) => label !== tab.label);
+	}
 </script>
 
 <div>
@@ -105,6 +123,22 @@
 				<p class="text-uni-red">No clubs found.</p>
 			{/if}
 		</section>
+
+		<section class="text-2xl mt-10 flex flex-col gap-6 w-full">
+			<div class="text-uni-red">Capsule Filter</div>
+			<div class="w-full h-1 bg-uni-red"></div>
+			<div class="flex flex-wrap items-center gap-2">
+				{#each tabs as tab, i}
+					<TabCapsule active={tab.active} label={tab.label} on:click={() => toggle(i)} />
+				{/each}
+			</div>
+			{#if selectedTabs.length > 0}
+				<p class="mt-4">Selected Tabs: {selectedTabs.join(', ')}</p>
+			{:else}
+				<p class="mt-4">No Tab Selected</p>
+			{/if}
+		</section>
+
 
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Club card</div>
