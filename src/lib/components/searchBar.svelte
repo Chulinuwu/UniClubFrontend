@@ -2,6 +2,8 @@
     import searchIcon from '../icon/search.svg'
 
 	export let value: string = '';
+    export let className: string = '';
+	export { className as class };
 	let inputRef: HTMLInputElement;
 
 	function handleClickIcon() {
@@ -9,7 +11,7 @@
 	}
 </script>
 
-<div class="search-bar">
+<div class="search-bar {className}">
 	<button on:click={handleClickIcon} type="button">
 		<img src={searchIcon} alt="Search Icon" />
 	</button>

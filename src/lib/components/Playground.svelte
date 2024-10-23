@@ -6,7 +6,9 @@
 	// import ProfileNavbar from './profileNavbar.svelte';
 	import ProfileIcon from './profile.svelte';
 	import SearchBar from './searchBar.svelte';
+	import ClubCard from './clubCard.svelte';
 
+	import clubIcon from '../icon/clubicon.svg'
 	import home from './../icon/homeicon.svg';
 	import edit from '../icon/edit.svg';
 	import storkeheart from '../icon/strokeheart.svg';
@@ -74,7 +76,7 @@
 			</div>
 		</section>
 
-		<!-- If you want to make it as square / you show add class 'rounded p-2' if you want shadow use 'shadow-md' -->
+		<!-- If you want to make it as square / you show add class 'bg-white rounded p-2' if you want shadow use 'shadow-md' -->
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Profile icon</div>
 			<div class="w-full h-1 bg-uni-red"></div>
@@ -101,5 +103,16 @@
 				<p class="text-uni-red">No clubs found.</p>
 			{/if}
 		</section>
+
+		<section class="text-2xl mt-10 flex flex-col gap-6">
+			<div class="text-uni-red">Club card</div>
+			<div class="w-full h-1 bg-uni-red"></div>
+			<div class="flex flex-col gap-3">
+				<ClubCard class="hover:scale-105 transition-all" imageURL={clubIcon} name="CEDT Sandbox Clubbbb" quote="loremipsum asda jlopajdsoiw kasows" />
+				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
+				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
+			</div>
+		</section>
+
 	</section>
 </div>
