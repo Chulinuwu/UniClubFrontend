@@ -10,65 +10,69 @@
     import Modal from '$lib/components/modal.svelte';
     import { goto } from '$app/navigation';
 
-    let searchValue = '';
-    let selectedCategories: string[] = [];
-    let selectedStatuses: string[] = [];
-    let selectedTypes: string[] = [];
+	let searchValue = '';
+	let selectedCategories: string[] = [];
+	let selectedStatuses: string[] = [];
+	let selectedTypes: string[] = [];
 
-      let categoryTabs = [
-        { label: 'Science', active: false },
-        { label: 'Arts', active: false },
-        { label: 'Sports', active: false }
-    ];
+	let categoryTabs = [
+		{ label: 'Science', active: false },
+		{ label: 'Arts', active: false },
+		{ label: 'Sports', active: false }
+	];
 
-    let statusTabs = [
-        { label: 'Open', active: false },
-        { label: 'Closed', active: false }
-    ];
+	let statusTabs = [
+		{ label: 'Open', active: false },
+		{ label: 'Closed', active: false }
+	];
 
-    let typeTabs = [
-        { label: 'University', active: false },
-        { label: 'Faculty', active: false },
-        { label: 'Major', active: false }
-    ];
+	let typeTabs = [
+		{ label: 'University', active: false },
+		{ label: 'Faculty', active: false },
+		{ label: 'Major', active: false }
+	];
 
-   function toggleCategory(index: number) {
-        categoryTabs = categoryTabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
-        const tab = categoryTabs[index];
-        selectedCategories = tab.active
-            ? [...selectedCategories, tab.label]
-            : selectedCategories.filter((label) => label !== tab.label);
-    }
+	function toggleCategory(index: number) {
+		categoryTabs = categoryTabs.map((tab, i) =>
+			i === index ? { ...tab, active: !tab.active } : tab
+		);
+		const tab = categoryTabs[index];
+		selectedCategories = tab.active
+			? [...selectedCategories, tab.label]
+			: selectedCategories.filter((label) => label !== tab.label);
+	}
 
-    function toggleStatus(index: number) {
-        statusTabs = statusTabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
-        const tab = statusTabs[index];
-        selectedStatuses = tab.active
-            ? [...selectedStatuses, tab.label]
-            : selectedStatuses.filter((label) => label !== tab.label);
-    }
+	function toggleStatus(index: number) {
+		statusTabs = statusTabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
+		const tab = statusTabs[index];
+		selectedStatuses = tab.active
+			? [...selectedStatuses, tab.label]
+			: selectedStatuses.filter((label) => label !== tab.label);
+	}
 
-    function toggleType(index: number) {
-        typeTabs = typeTabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
-        const tab = typeTabs[index];
-        selectedTypes = tab.active
-            ? [...selectedTypes, tab.label]
-            : selectedTypes.filter((label) => label !== tab.label);
-    }
+	function toggleType(index: number) {
+		typeTabs = typeTabs.map((tab, i) => (i === index ? { ...tab, active: !tab.active } : tab));
+		const tab = typeTabs[index];
+		selectedTypes = tab.active
+			? [...selectedTypes, tab.label]
+			: selectedTypes.filter((label) => label !== tab.label);
+	}
 
-    $: filteredMemos = memos.filter((memo) => {
-        const matchesName = memo.name.toLowerCase().includes(searchValue.toLowerCase());
-        const matchesCategory = selectedCategories.length > 0 ? selectedCategories.includes(memo.tags.category) : true;
-        const matchesStatus = selectedStatuses.length > 0 ? selectedStatuses.includes(memo.tags.status) : true;
-        const matchesType = selectedTypes.length > 0 ? selectedTypes.includes(memo.tags.type) : true;
-        return matchesName && matchesCategory && matchesStatus && matchesType;
-    });
+	$: filteredMemos = memos.filter((memo) => {
+		const matchesName = memo.name.toLowerCase().includes(searchValue.toLowerCase());
+		const matchesCategory =
+			selectedCategories.length > 0 ? selectedCategories.includes(memo.tags.category) : true;
+		const matchesStatus =
+			selectedStatuses.length > 0 ? selectedStatuses.includes(memo.tags.status) : true;
+		const matchesType = selectedTypes.length > 0 ? selectedTypes.includes(memo.tags.type) : true;
+		return matchesName && matchesCategory && matchesStatus && matchesType;
+	});
 
-    let isModalOpen = false;
-    
-    function openModal() {
-        isModalOpen = true;
-    }
+	let isModalOpen = false;
+
+	function openModal() {
+		isModalOpen = true;
+	}
 
     function closeModal() {
         isModalOpen = false;
@@ -85,15 +89,13 @@
 </script>
 
 <div class="w-full h-full">
+	<div class="p-4 flex w-full justify-between fixed bg-white items-center gap-5">
+		<SearchBar bind:value={searchValue} />
+		<button class="w-[32px]" on:click={openModal}>
+			<img src={filterIcon} alt="filter" />
+		</button>
 
-
-    <div class="p-4 flex w-full justify-between fixed bg-white items-center gap-5">
-        <SearchBar bind:value={searchValue} />
-        <button class="w-[32px]" on:click={openModal}>
-            <img src={filterIcon} alt="filter">
-        </button>
-        
-        <!-- <div class="text-uni-red">Capsule Filter</div>
+		<!-- <div class="text-uni-red">Capsule Filter</div>
         <div class="w-full h-1 bg-uni-red"></div>
         <div class="flex flex-wrap items-center gap-2">
             {#each tabs as tab, i}
@@ -105,7 +107,7 @@
         {:else}
             <p class="mt-4">No Tab Selected</p>
         {/if} -->
-    </div>
+	</div>
 
     <Modal isOpen={isModalOpen} onClose={closeModal}>
         <div class="mt-3 font-bold">Category</div>
@@ -137,6 +139,5 @@
         {/each}
     </div>
 
-    <BottomNavbar/>
-
+	<BottomNavbar />
 </div>
