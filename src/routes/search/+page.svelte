@@ -8,6 +8,7 @@
     import  Clubcard from "$lib/components/clubCard.svelte"
     import filterIcon from "$lib/icon/filter.svg";
     import Modal from '$lib/components/modal.svelte';
+    import { goto } from '$app/navigation';
 
     let searchValue = '';
     let selectedCategories: string[] = [];
@@ -71,6 +72,15 @@
 
     function closeModal() {
         isModalOpen = false;
+    }    
+
+    function getClubDetails(clubId: any) {
+        return memos.find(club => club.clubId === clubId);
+    }
+
+    function handleNavigate(event : any) {
+        const { clubId } = event.detail;
+        goto(`/clubs/${clubId}`);
     }
 </script>
 
@@ -123,7 +133,7 @@
     <div class="w-full h-[95px]"></div>
     <div class="p-5 gap-[10px]  flex flex-col w-full items-center mb-[100px]">
         {#each filteredMemos as memo}
-    <Clubcard name={memo.name} quote={memo.header} imageURL={memo.imageURL}/>
+      <Clubcard clubId={memo.clubId} name={memo.name} quote={memo.header} imageURL={memo.imageURL} on:navigate={handleNavigate} />
         {/each}
     </div>
 
