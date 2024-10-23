@@ -7,6 +7,7 @@
 	import ProfileIcon from './profile.svelte';
 	import SearchBar from './searchBar.svelte';
 	import ClubCard from './clubCard.svelte';
+	import FeedCard from './feedCard.svelte';
 
 	import clubIcon from '../icon/clubicon.svg'
 	import home from './../icon/homeicon.svg';
@@ -111,6 +112,16 @@
 				<ClubCard class="hover:scale-105 transition-all" imageURL={clubIcon} name="CEDT Sandbox Clubbbb" quote="loremipsum asda jlopajdsoiw kasows" />
 				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
 				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
+			</div>
+		</section>
+
+		<section class="text-2xl mt-10 flex flex-col gap-6 w-full">
+			<div class="text-uni-red">Feed card</div>
+			<div class="w-full h-1 bg-uni-red"></div>
+			<div class="flex flex-col gap-3">
+				<FeedCard date="10/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
+				<FeedCard date="05/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
+				<FeedCard date="05/22/2020" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
 			</div>
 		</section>
 
