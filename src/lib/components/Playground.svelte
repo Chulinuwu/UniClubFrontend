@@ -1,6 +1,7 @@
 <script type="ts">
 	import uniclub from '$lib/images/Uniclub.png';
 	import Button from './button.svelte';
+	import Placeholder from './placeholder.svelte';
 </script>
 
 <section class="p-10">
@@ -8,7 +9,7 @@
 	<div class="font-semibold text-xl mt-10 w-full flex justify-center text-uni-red">
 		PlayGround (CEDT Sandbox)
 	</div>
-    <div class="font-light text-xl">
+    <div class="font-light text-xl mt-10">
         This is light text
     </div>
     <div class="font-normal text-xl">
@@ -22,5 +23,11 @@
 		<div class="text-uni-red">Button</div>
 		<div class="w-full h-1 bg-uni-red"></div>
 		<Button buttonName="Click Me" />
+	</section>
+
+	<section class="text-2xl mt-10 flex  flex-col gap-6">
+		<div class="text-uni-red">Placeholder</div>
+		<div class="w-full h-1 bg-uni-red"></div>
+		<Placeholder inputName="Type me" />
 	</section>
 </section>
