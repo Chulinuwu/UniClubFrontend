@@ -8,15 +8,17 @@
 	import fullheart from '../icon/fullheart.svg';
 	import notification from '../icon/notification.svg';
 	import search from '../icon/search.svg';
-
+	import Topnavbar from './Topnavbar.svelte';
 	let x = 0;
 	function handlebuttonclick() {
 		x++;
 	}
 </script>
 
-<section class="p-10">
-	<div class="w-full justify-center flex h-[100px]"><img src={uniclub} alt="uniclub" /></div>
+<div>
+	<Topnavbar/>
+<section class="p-10 ">
+	<div class="w-full justify-center flex h-[100px] mt-[100px]"><img src={uniclub} alt="uniclub" /></div>
 	<div class="font-semibold text-xl mt-10 w-full flex justify-center text-uni-red">
 		PlayGround (CEDT Sandbox)
 	</div>
@@ -53,3 +55,4 @@
 	</section>
 
 </section>
+</div>
