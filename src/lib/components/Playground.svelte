@@ -9,23 +9,17 @@
 	<div class="font-semibold text-xl mt-10 w-full flex justify-center text-uni-red">
 		PlayGround (CEDT Sandbox)
 	</div>
-    <div class="font-light text-xl mt-10">
-        This is light text
-    </div>
-    <div class="font-normal text-xl">
-        This is normal text
-    </div>
-    <div class="font-bold text-xl">
-        This is bold text
-    </div>
+	<div class="font-light text-xl mt-10">This is light text</div>
+	<div class="font-normal text-xl">This is normal text</div>
+	<div class="font-bold text-xl">This is bold text</div>
 
-	<section class="text-2xl mt-10 flex  flex-col gap-6">
+	<section class="text-2xl mt-10 flex flex-col gap-6">
 		<div class="text-uni-red">Button</div>
 		<div class="w-full h-1 bg-uni-red"></div>
 		<Button buttonName="Click Me" />
 	</section>
 
-	<section class="text-2xl mt-10 flex  flex-col gap-6">
+	<section class="text-2xl mt-10 flex flex-col gap-6">
 		<div class="text-uni-red">Placeholder</div>
 		<div class="w-full h-1 bg-uni-red"></div>
 		<Placeholder inputName="Type me" />

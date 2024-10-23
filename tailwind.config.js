@@ -11,7 +11,7 @@ module.exports = {
 				'uni-graybox': '#ECECEC',
 				'uni-red': '#FF5555',
 				'uni-graytext2': '#ACACAC',
-				'uni-darkred' : '#D74949',
+				'uni-darkred': '#D74949'
 			}
 		}
 	},

@@ -12,3 +12,4 @@ npm run dev
 
 ## Before you commit
 pnpm run fix
+```
