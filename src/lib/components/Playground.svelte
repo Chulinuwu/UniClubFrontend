@@ -5,6 +5,7 @@
 	import ClubNavbar from './ClubNavbar.svelte';
 	// import ProfileNavbar from './profileNavbar.svelte';
 	import ProfileIcon from './profile.svelte';
+	import SearchBar from './searchBar.svelte';
 
 	import home from './../icon/homeicon.svg';
 	import edit from '../icon/edit.svg';
@@ -22,6 +23,8 @@
 	function handlebuttonclick() {
 		x++;
 	}
+
+	let searchValue = '';
 </script>
 
 <div>
@@ -80,6 +83,12 @@
 			</div>
 		</section>
 
+		<section class="text-2xl mt-10 flex flex-col gap-6">
+			<div class="text-uni-red">Search Bar</div>
+			<div class="w-full h-1 bg-uni-red"></div>
+			<SearchBar bind:value={searchValue} />
+			<p>Search Value : {searchValue == '' ? 'no value' : searchValue}</p>
+		</section>
 
 	</section>
 </div>
