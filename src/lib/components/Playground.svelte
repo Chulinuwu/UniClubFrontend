@@ -10,6 +10,7 @@
 	import FeedCard from './feedCard.svelte';
 	import MemberCard from './memberCard.svelte';
 	import TabCapsule from './tabCapsule.svelte';
+	import BottomNavbar from './bottomNavbar.svelte';
 
 	import clubIcon from '../icon/clubicon.svg';
 	import home from './../icon/homeicon.svg';
@@ -52,11 +53,11 @@
 	}
 </script>
 
-<div>
+<div class="max-w-[100vw]">
 	<!-- <Topnavbar/> -->
 	<ClubNavbar />
 	<!-- <ProfileNavbar/> -->
-	<section class="p-10">
+	<section class="p-10 mb-[100px]">
 		<div class="w-full justify-center flex h-[100px] mt-[100px]">
 			<img src={uniclub} alt="uniclub" />
 		</div>
@@ -195,4 +196,5 @@
 			</div>
 		</section>
 	</section>
+	<BottomNavbar/>
 </div>
