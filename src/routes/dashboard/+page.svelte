@@ -2,7 +2,7 @@
     import Topnavbar from "$lib/components/Topnavbar.svelte";
     import BottomNavbar from "$lib/components/bottomNavbar.svelte";
 	import FeedCard from "$lib/components/feedCard.svelte";
-    import { memos } from '$lib/mock/feedmemos';
+    import { feedMemos } from '$lib/mock/feedmemos';
    
 </script>
 
@@ -13,7 +13,7 @@
         Corousel
     </div>
 <div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
-    {#each memos as memo}
+    {#each feedMemos as memo}
     <FeedCard
         date={memo.date}
         imageURL={memo.imageURL}
