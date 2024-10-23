@@ -1,8 +1,8 @@
 <script lang="ts">
-    import searchIcon from '../icon/search.svg'
+	import searchIcon from '../icon/search.svg';
 
 	export let value: string = '';
-    export let className: string = '';
+	export let className: string = '';
 	export { className as class };
 	let inputRef: HTMLInputElement;
 

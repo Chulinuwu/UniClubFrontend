@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let buttonName = '';
-    export let className: string = '';
+	export let className: string = '';
 	export { className as class };
 </script>
 

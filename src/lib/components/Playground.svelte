@@ -11,7 +11,7 @@
 	import MemberCard from './memberCard.svelte';
 	import TabCapsule from './tabCapsule.svelte';
 
-	import clubIcon from '../icon/clubicon.svg'
+	import clubIcon from '../icon/clubicon.svg';
 	import home from './../icon/homeicon.svg';
 	import edit from '../icon/edit.svg';
 	import storkeheart from '../icon/strokeheart.svg';
@@ -35,13 +35,12 @@
 	// Computed property to filter clubs based on searchValue
 	$: filteredClubs = clubs.filter((club) => club.toLowerCase().includes(searchValue.toLowerCase()));
 
-
 	let selectedTabs: string[] = [];
 	let tabs = [
 		{ label: 'Sport', active: false },
 		{ label: 'Science', active: false },
 		{ label: 'Math', active: false },
-		{ label: 'Art', active: false },
+		{ label: 'Art', active: false }
 	];
 
 	function toggle(index: number) {
@@ -114,11 +113,11 @@
 			<SearchBar bind:value={searchValue} />
 			<p class="text-uni-red">Search Value : {searchValue == '' ? 'no value' : searchValue}</p>
 			{#if filteredClubs.length > 0}
-					<ul class="list-disc list-inside text-uni-red font-light">
-						{#each filteredClubs as club}
-							<li>{club}</li>
-						{/each}
-					</ul>
+				<ul class="list-disc list-inside text-uni-red font-light">
+					{#each filteredClubs as club}
+						<li>{club}</li>
+					{/each}
+				</ul>
 			{:else}
 				<p class="text-uni-red">No clubs found.</p>
 			{/if}
@@ -139,12 +138,16 @@
 			{/if}
 		</section>
 
-
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Club card</div>
 			<div class="w-full h-1 bg-uni-red"></div>
 			<div class="flex flex-col gap-3">
-				<ClubCard class="hover:scale-105 transition-all" imageURL={clubIcon} name="CEDT Sandbox Clubbbb" quote="loremipsum asda jlopajdsoiw kasows" />
+				<ClubCard
+					class="hover:scale-105 transition-all"
+					imageURL={clubIcon}
+					name="CEDT Sandbox Clubbbb"
+					quote="loremipsum asda jlopajdsoiw kasows"
+				/>
 				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
 				<ClubCard imageURL={clubIcon} name="CEDT Sandbox" quote="loremipsum asdas" />
 			</div>
@@ -154,9 +157,24 @@
 			<div class="text-uni-red">Feed card</div>
 			<div class="w-full h-1 bg-uni-red"></div>
 			<div class="flex flex-col gap-3">
-				<FeedCard date="10/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
-				<FeedCard date="05/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
-				<FeedCard date="05/22/2020" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
+				<FeedCard
+					date="10/22/2024"
+					imageURL={profile2}
+					name="CEDT Sandbox Clubbbb"
+					header="Moodeng is born i am very happy to see Moodeng"
+				/>
+				<FeedCard
+					date="05/22/2024"
+					imageURL={profile2}
+					name="CEDT Sandbox Clubbbb"
+					header="Moodeng is born i am very happy to see Moodeng"
+				/>
+				<FeedCard
+					date="05/22/2020"
+					imageURL={profile2}
+					name="CEDT Sandbox Clubbbb"
+					header="Moodeng is born i am very happy to see Moodeng"
+				/>
 			</div>
 		</section>
 
@@ -165,14 +183,16 @@
 			<div class="w-full h-1 bg-uni-red"></div>
 			<div class="flex flex-col gap-3">
 				<!-- Top 5 people with longest name in the world -->
-				<MemberCard  imageURL={profile2} name="Nicholas Unless-Jesus-Christ-Had-Died-For-Thee-Thou-Hadst-Been-Damned Barbon" role="Member" />
+				<MemberCard
+					imageURL={profile2}
+					name="Nicholas Unless-Jesus-Christ-Had-Died-For-Thee-Thou-Hadst-Been-Damned Barbon"
+					role="Member"
+				/>
 				<!-- Uniclub Member -->
-				<MemberCard  imageURL={profile2} name="Jirameth Wannasiwaporn" role="Super Admin" />
-				<MemberCard  imageURL={profile2} name="Kitiwan Nawanetiwong" role="Admin" />
-				<MemberCard  imageURL={profile2} name="Amphikapha Thathong" role="Member" />
-		
+				<MemberCard imageURL={profile2} name="Jirameth Wannasiwaporn" role="Super Admin" />
+				<MemberCard imageURL={profile2} name="Kitiwan Nawanetiwong" role="Admin" />
+				<MemberCard imageURL={profile2} name="Amphikapha Thathong" role="Member" />
 			</div>
 		</section>
-
 	</section>
 </div>
