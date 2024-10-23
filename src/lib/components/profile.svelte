@@ -4,6 +4,6 @@
 	export { className as class };
 </script>
 
-<div class="white {className} rounded-full w-[100px] h-[100px] overflow-hidden">
+<div class="white {className} w-[100px] h-[100px] overflow-hidden">
 	<img src={imageURL} alt="profile" class="w-full h-full object-cover" />
 </div>

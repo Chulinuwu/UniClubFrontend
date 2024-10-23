@@ -96,7 +96,8 @@
 			</div>
 		</section>
 
-		<!-- If you want to make it as square / you show add class 'bg-white rounded p-2' if you want shadow use 'shadow-md' -->
+		<!-- If you want to make it as square / you show add class 'bg-white rounded p-2' if you want shadow use 'shadow-md' 
+		 if you want to make it circle just use 'rounded-full' -->
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Profile icon</div>
 			<div class="w-full h-1 bg-uni-red"></div>
