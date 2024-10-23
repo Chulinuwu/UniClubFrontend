@@ -25,6 +25,10 @@
 	}
 
 	let searchValue = '';
+	const clubs = ['SportClub', 'MusicClub', 'ArtClub', 'ScienceClub', 'DramaClub'];
+
+	// Computed property to filter clubs based on searchValue
+	$: filteredClubs = clubs.filter((club) => club.toLowerCase().includes(searchValue.toLowerCase()));
 </script>
 
 <div>
@@ -70,7 +74,6 @@
 			</div>
 		</section>
 
-
 		<!-- If you want to make it as square / you show add class 'rounded p-2' if you want shadow use 'shadow-md' -->
 		<section class="text-2xl mt-10 flex flex-col gap-6">
 			<div class="text-uni-red">Profile icon</div>
@@ -87,8 +90,16 @@
 			<div class="text-uni-red">Search Bar</div>
 			<div class="w-full h-1 bg-uni-red"></div>
 			<SearchBar bind:value={searchValue} />
-			<p>Search Value : {searchValue == '' ? 'no value' : searchValue}</p>
+			<p class="text-uni-red">Search Value : {searchValue == '' ? 'no value' : searchValue}</p>
+			{#if filteredClubs.length > 0}
+					<ul class="list-disc list-inside text-uni-red font-light">
+						{#each filteredClubs as club}
+							<li>{club}</li>
+						{/each}
+					</ul>
+			{:else}
+				<p class="text-uni-red">No clubs found.</p>
+			{/if}
 		</section>
-
 	</section>
 </div>
