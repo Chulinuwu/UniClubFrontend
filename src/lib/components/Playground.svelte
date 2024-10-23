@@ -8,6 +8,7 @@
 	import SearchBar from './searchBar.svelte';
 	import ClubCard from './clubCard.svelte';
 	import FeedCard from './feedCard.svelte';
+	import MemberCard from './memberCard.svelte';
 
 	import clubIcon from '../icon/clubicon.svg'
 	import home from './../icon/homeicon.svg';
@@ -122,6 +123,20 @@
 				<FeedCard date="10/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
 				<FeedCard date="05/22/2024" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
 				<FeedCard date="05/22/2020" imageURL={profile2} name="CEDT Sandbox Clubbbb" header="Moodeng is born i am very happy to see Moodeng" />
+			</div>
+		</section>
+
+		<section class="text-2xl mt-10 flex flex-col gap-6 w-full">
+			<div class="text-uni-red">Member card</div>
+			<div class="w-full h-1 bg-uni-red"></div>
+			<div class="flex flex-col gap-3">
+				<!-- Top 5 people with longest name in the world -->
+				<MemberCard  imageURL={profile2} name="Nicholas Unless-Jesus-Christ-Had-Died-For-Thee-Thou-Hadst-Been-Damned Barbon" role="Member" />
+				<!-- Uniclub Member -->
+				<MemberCard  imageURL={profile2} name="Jirameth Wannasiwaporn" role="Super Admin" />
+				<MemberCard  imageURL={profile2} name="Kitiwan Nawanetiwong" role="Admin" />
+				<MemberCard  imageURL={profile2} name="Amphikapha Thathong" role="Member" />
+		
 			</div>
 		</section>
 
