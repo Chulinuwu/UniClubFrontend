@@ -120,7 +120,7 @@
             {/each}
         </div>
     </Modal>
-    <div class="w-full h-[104px]"></div>
+    <div class="w-full h-[95px]"></div>
     <div class="p-5 gap-[10px]  flex flex-col w-full items-center mb-[100px]">
         {#each filteredMemos as memo}
     <Clubcard name={memo.name} quote={memo.header} imageURL={memo.imageURL}/>
