@@ -5,7 +5,7 @@
 	import { goto } from '$app/navigation';
 </script>
 
-<div class="w-full h-[100px] p-5 fixed z-50 bg-white flex items-center justify-between">
+<div class="w-full h-[100px] p-5 fixed z-50  bg-white flex items-center justify-between">
 	<button on:click={() => history.back()} class="flex h-[40px]"
 		><img src={back} alt="back" /></button
 	>

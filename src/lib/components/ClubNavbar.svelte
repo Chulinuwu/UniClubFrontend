@@ -57,7 +57,7 @@
 		><img src={back} alt="back" /></button
 	>
 	<!-- <div class="flex h-[50px] min-w-10"><img src={uniclub} alt="uniclub" /></div> -->
-	<div class="flex w-[40px] h-[50px] min-w-10">
+	<div class="flex w-[40px] h-[50px] min-w-7 max-w-7">
 		<button on:click={toggleHeart} class="cursor-pointer">
 			<img
 				src={isHeartFull ? fullheart : strokeheart}
