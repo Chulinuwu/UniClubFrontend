@@ -1,5 +1,6 @@
 <script lang="ts">
     import ClubNavbar from '$lib/components/ClubNavbar.svelte';
+    import clubbg from '../../../lib/images/clubbg.png';
     export let data;
     const { club } = data;
 </script>
@@ -7,12 +8,20 @@
 <ClubNavbar />
   
   {#if club}
-    <div class="w-full h-full flex flex-col items-center justify-center space-y-6">
+    <div class="w-full h-full flex flex-col items-center justify-center">
         <div class="flex w-full h-[100px] bg-slate-300"></div>
-        <div class="flex w-full h-[256px] bg-slate-200"></div>
-      <h1 class="text-4xl font-bold">{club.name}</h1>
-      <img src={club.imageURL} alt="{club.name}" class="w-64 h-64 object-cover rounded-lg" />
-      <p class="text-lg">{club.header}</p>
+        <div class="flex w-full h-[256px]">
+            <img src={clubbg} alt="clubbg" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute top-52 w-full flex justify-center">
+        <img src={club.imageURL} alt="{club.name}" class="w-60 h-60 object-cover shadow-lg rounded-xl" />
+        </div>
+        <div class="flex flex-col w-full h-auto text-center items-center mt-28">
+      <h1 class="text-4xl font-bold text-black">{club.name}</h1>
+      <p class="text-lg text-uni-graytext">{club.header}</p>
+      <div class="flex w-1/2 h-0.5 my-4 bg-uni-red"></div>
+    </div>
+    <div class="flex w-full h-[100px] bg-slate-300"></div>
       <div class="flex flex-col space-y-2">
         <h2 class="text-2xl font-semibold">Tags</h2>
         <p><strong>Category:</strong> {club.tags.category}</p>

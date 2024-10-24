@@ -35,7 +35,7 @@
 	<div class="w-full h-[100px]"></div>
 	<div class="relative flex w-full h-[256px] ">
 		<button
-			class="absolute left-5 top-1/2 transform -translate-y-1/2  cursor-pointer transition-all"
+			class="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer transition-all"
 			on:click={handleLeftClick}
 		>
 			<img src={LeftArrow} alt="Left Arrow" />

@@ -11,10 +11,10 @@
 	}
 </script>
 
-<div class="w-full h-[100px] p-5 fixed bg-white flex items-center justify-between">
+<div class="w-full h-[100px] z-50 p-5 fixed bg-white flex items-center justify-between">
 	<div class="flex h-[40px]"><img src={back} alt="back" /></div>
 	<div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
-	<div class="flex h-[50px]">
+	<div class="flex w-[40px] h-[50px]">
 		<button on:click={toggleHeart} class="cursor-pointer">
 			<img
 				src={isHeartFull ? fullheart : strokeheart}
