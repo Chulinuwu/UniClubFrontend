@@ -15,9 +15,9 @@ export const clubMemos = [
             type: 'University'
         },
         members: [
-            { name: 'John Doe', studentId: 'S12345' , role:'member' },
-            { name: 'Jane Smith', studentId: 'S12346', role:'admin' },
-            { name: 'Alice Johnson', studentId: 'S12347' , role:'admin'},
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'Super Admin' },
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
         ],
         contacts: {
             ig: 'cusandbox',
@@ -39,9 +39,10 @@ export const clubMemos = [
             type: 'University'
         },
         members: [
-            { name: 'Michael Brown', studentId: 'S12348' },
-            { name: 'Emily Davis', studentId: 'S12349' },
-            { name: 'David Wilson', studentId: 'S12350' }
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'Admin' },
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'scienceclub',
@@ -63,9 +64,10 @@ export const clubMemos = [
             type: 'University'
         },
         members: [
-            { name: 'Sarah Johnson', studentId: 'S12351' },
-            { name: 'James Lee', studentId: 'S12352' },
-            { name: 'Patricia Miller', studentId: 'S12353' }
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'Admin' },
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'artsclub',
@@ -83,13 +85,14 @@ export const clubMemos = [
         header: 'Fostering business acumen',
         tags: {
             category: 'Business',
-            status: 'Open',
-            type: 'University'
+            status: 'Closed',
+            type: 'Major'
         },
         members: [
-            { name: 'Robert Martinez', studentId: 'S12354' },
-            { name: 'Linda Anderson', studentId: 'S12355' },
-            { name: 'Barbara Thomas', studentId: 'S12356' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'User' },
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'businessclub',
@@ -108,12 +111,12 @@ export const clubMemos = [
         tags: {
             category: 'Law',
             status: 'Open',
-            type: 'University'
+            type: 'Major'
         },
         members: [
-            { name: 'William Harris', studentId: 'S12357' },
-            { name: 'Elizabeth Clark', studentId: 'S12358' },
-            { name: 'Christopher Lewis', studentId: 'S12359' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'lawclub',
@@ -131,13 +134,14 @@ export const clubMemos = [
         header: 'Advancing medical knowledge',
         tags: {
             category: 'Medicine',
-            status: 'Open',
+            status: 'Closed',
             type: 'University'
         },
         members: [
-            { name: 'Joseph Walker', studentId: 'S12360' },
-            { name: 'Nancy Hall', studentId: 'S12361' },
-            { name: 'Karen Allen', studentId: 'S12362' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'User' },
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'medicalclub',
@@ -156,12 +160,12 @@ export const clubMemos = [
         tags: {
             category: 'Technology',
             status: 'Open',
-            type: 'University'
+            type: 'Faculty'
         },
         members: [
-            { name: 'Daniel Young', studentId: 'S12363' },
-            { name: 'Jessica King', studentId: 'S12364' },
-            { name: 'Matthew Wright', studentId: 'S12365' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'csclub',
@@ -183,9 +187,9 @@ export const clubMemos = [
             type: 'University'
         },
         members: [
-            { name: 'Paul Scott', studentId: 'S12366' },
-            { name: 'Mary Green', studentId: 'S12367' },
-            { name: 'Mark Adams', studentId: 'S12368' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'envclub',
@@ -203,13 +207,13 @@ export const clubMemos = [
         header: 'Empowering future educators',
         tags: {
             category: 'Education',
-            status: 'Open',
-            type: 'University'
+            status: 'Closed',
+            type: 'Faculty'
         },
         members: [
-            { name: 'Steven Baker', studentId: 'S12369' },
-            { name: 'Donna Gonzalez', studentId: 'S12370' },
-            { name: 'George Perez', studentId: 'S12371' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'educlub',
@@ -227,13 +231,13 @@ export const clubMemos = [
         header: 'Celebrating musical talent',
         tags: {
             category: 'Music',
-            status: 'Open',
+            status: 'Closed',
             type: 'University'
         },
         members: [
-            { name: 'Brian Roberts', studentId: 'S12372' },
-            { name: 'Lisa Martinez', studentId: 'S12373' },
-            { name: 'Kevin Hernandez', studentId: 'S12374' }
+            { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'John Doe', studentId: 'S12348' , role:'Super Admin' },
         ],
         contacts: {
             ig: 'musicclub',
