@@ -1,21 +1,12 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import ProfileNavbar from '$lib/components/profileNavbar.svelte';
 	import MemberCard from '$lib/components/memberCard.svelte';
 	import profile3 from '../../../lib/images/profile3.jpg';
 	import type { ClubMemos } from '$lib/interface/interface';
-	import { onMount } from 'svelte';
 
 	let clubs: ClubMemos
 	export let data;
-	const { id } = data;
-
-	onMount(() => {
-        const clubData = localStorage.getItem('clubMemos');
-        if (clubData) {
-            const clubs: ClubMemos[] = JSON.parse(clubData);
-  		  console.log(clubs);
-        }
-    });
+	const { club } = data;
 
 	let activeMemberId: string | null = null;
 
@@ -23,9 +14,13 @@
 		activeMemberId = activeMemberId === memberId ? null : memberId;
 	}
 
-	// function updateMockMemopage(newClubValue: any) {
-	// 	mockMemo = { ...mockMemo, club: newClubValue };
-	// }
+	function handleRoleChange(event) {
+        const { studentId, newRole } = event.detail;
+        const member = club.members.find(m => m.studentId === studentId);
+        if (member) {
+            member.role = newRole; // Update the local state
+        }
+    }
 </script>
 
 {#if club}
@@ -52,6 +47,8 @@
 			{#each club.members as member}
 				{#if member.studentId !== 'S12345'}
 					<MemberCard
+						clubId={club.clubId}
+						studentId={member.studentId}
 						name={member.name}
 						role={member.role}
 						imageURL={profile3}
@@ -62,10 +59,10 @@
 						class="w-full"
 						isActive={activeMemberId === member.studentId}
 						on:toggleDetails={() => toggleDetails(member.studentId)}
+						on:roleChanged={handleRoleChange}
 					/>
 				{/if}
 			{/each}
 		</div>
 	</div>
 {/if}
- -->

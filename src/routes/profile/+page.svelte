@@ -6,22 +6,18 @@
     import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
+	import { userStore } from '$lib/store/userStore';
 
-    let user: any = null;
+    // let user: any = null;
+	export let data;
+	const { user } = data;
     const userId = 'S12345';
 
     onMount(() => {
         if (browser) {
-            const userData = localStorage.getItem('userMemos');
-            if (userData) {
-                const userProfile = JSON.parse(userData);
-                user = userProfile.find((memo: { userId: string }) => memo.userId === userId);
-                if (!user) {
-                    console.error('User not found');
-                }
-            } else {
-                console.error('User data not found in localStorage');
-            }
+			if (!user) {
+				console.error('User not found');
+			}
         }
     });
 

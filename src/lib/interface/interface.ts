@@ -17,6 +17,11 @@ export interface Contacts {
 }
 
 export interface Club {
+    clubId: string;
+    date: string;
+    faculty: string;
+    info: string;
+    imageURL: string;
     name: string;
     header: string;
     tags: Tags;
