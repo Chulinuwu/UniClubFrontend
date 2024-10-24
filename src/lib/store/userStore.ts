@@ -37,3 +37,36 @@ export function removeFavoriteClubOfUser(userId: string, clubId: string) {
         return users;
     });
 }
+
+export function insertFavoriteFeedOfUser(userId: string, feedId: string) {
+    userStore.update(users => {
+        const userIndex = users.findIndex(user => user.userId === userId);
+        if (userIndex !== -1) {
+            const user = users[userIndex];
+            if (!user.feedsFav.includes(feedId)) {
+                user.feedsFav.push(feedId); // Add feed to the user's favorites
+            }
+            users[userIndex] = user;
+        }
+
+        return users;
+    });
+}
+
+export function removeFavoriteFeedOfUser(userId: string, feedId: string) {
+    userStore.update(users => {
+        const userIndex = users.findIndex(user => user.userId === userId);
+        if (userIndex !== -1) {
+            const user = users[userIndex];
+            const feedIndex = user.feedsFav.indexOf(feedId);
+
+            if (feedIndex !== -1) {
+                user.feedsFav.splice(feedIndex, 1); // Remove the feed from favorites
+            }
+
+            users[userIndex] = user;
+        }
+
+        return users;
+    });
+}

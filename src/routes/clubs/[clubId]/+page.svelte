@@ -19,7 +19,7 @@
 	console.log(club);
 </script>
 
-<ClubNavbar clubId={club?.clubId}/>
+<ClubNavbar id={club?.clubId} type={'club'}/>
 
 {#if club}
 	<div class="w-full min-h-[100vh] flex flex-col items-center justify-center">

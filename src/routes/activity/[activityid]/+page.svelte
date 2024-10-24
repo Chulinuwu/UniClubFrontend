@@ -18,7 +18,7 @@
 	console.log(feed);
 </script>
 
-<ClubNavbar />
+<ClubNavbar id={feed?.feed.feedId} type={'feed'}/>
 
 {#if feed}
 	<div class="w-full min-h-[100vh]">

@@ -7,27 +7,42 @@
 	import { userStore } from '$lib/store/userStore';
 	import { insertFavoriteClubOfUser } from '$lib/store/userStore';
 	import { removeFavoriteClubOfUser } from '$lib/store/userStore'
+	import { insertFavoriteFeedOfUser } from '$lib/store/userStore';
+	import { removeFavoriteFeedOfUser } from '$lib/store/userStore';
 
+	export let id: string | undefined;  // This can be either clubId or feedId
+    export let type: 'club' | 'feed'; // Indicates the type (club or feed)
 	let isHeartFull = false;
 
-	export let clubId: string | undefined; // Accept clubId as a prop
-	console.log("clubId from ClubNavbar:", clubId); // You can use clubId here
-	// Check if the club is already favorited
-	if (clubId != undefined) {
-		isHeartFull = $userStore[0].clubsFav.includes(clubId);
-	}
+	// Load initial state to check if this club or feed is already favorited
+    $: if (type === 'club') {
+        // Check if the club is already favorited
+		if (id != undefined) {
+			isHeartFull = $userStore[0].clubsFav.includes(id);
+		}
+    } else if (type === 'feed') {
+        // Check if the feed is already favorited
+		if (id != undefined) {
+			isHeartFull = $userStore[0].feedsFav.includes(id);
+		}
+    }
 
 	function toggleHeart() {
 		isHeartFull = !isHeartFull;
 		
-		if (clubId != undefined) {
-			// You can also make an API call to update the favorite status
+		if (id != undefined) {
 			if (isHeartFull) {
-				// Add to favorites
-				insertFavoriteClubOfUser($userStore[0].userId, clubId);
+				if (type === 'club') {
+					insertFavoriteClubOfUser($userStore[0].userId, id); // Add the club to favorites
+				} else if (type === 'feed') {
+					insertFavoriteFeedOfUser($userStore[0].userId, id); // Add the feed to favorites
+				}
 			} else {
-				// Remove from favorites
-				removeFavoriteClubOfUser($userStore[0].userId, clubId);
+				if (type === 'club') {
+					removeFavoriteClubOfUser($userStore[0].userId, id); // Remove the club from favorites
+				} else if (type === 'feed') {
+					removeFavoriteFeedOfUser($userStore[0].userId, id); // Remove the feed from favorites
+				}
 			}
 		}
 	}
