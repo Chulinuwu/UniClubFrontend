@@ -4,6 +4,8 @@ export const clubMemos = [
     {
         clubId: 'C001',
         date: '10/22/2024',
+        faculty: 'Faculty of Engineering',
+        info: 'The Faculty of Engineering is one of the largest faculties in the University of Moratuwa. It offers undergraduate and postgraduate programs in a wide range of engineering disciplines.',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
         header: 'Moodeng is born i am very happy to see Moodeng',
@@ -13,213 +15,230 @@ export const clubMemos = [
             type: 'University'
         },
         members: [
-            { name: 'John Doe', studentId: 'S12345' },
-            { name: 'Jane Smith', studentId: 'S12346' },
-            { name: 'Alice Johnson', studentId: 'S12347' }
+            { name: 'John Doe', studentId: 'S12345' , role:'member' },
+            { name: 'Jane Smith', studentId: 'S12346', role:'admin' },
+            { name: 'Alice Johnson', studentId: 'S12347' , role:'admin'},
         ],
-        contacts: [
-            { name: 'John Doe', phone: '123-456-7890', email: 'john@example.com' },
-            { name: 'Jane Smith', phone: '123-456-7891', email: 'jane@example.com' },
-            { name: 'Alice Johnson', phone: '123-456-7892', email: 'alice@example.com' }
-        ]
+        contacts: {
+            ig: 'cusandbox',
+            line: 'cusandbox.line',
+            facebook: 'cusandbox.facebook'
+        }
     },
     {
         clubId: 'C002',
         date: '11/15/2024',
+        faculty: 'Faculty of Science',
+        info: 'The Faculty of Science offers a wide range of undergraduate and postgraduate programs in various scientific disciplines.',
         imageURL: profile2,
-        name: 'Music Club',
-        header: 'We had an amazing concert last night!',
+        name: 'Science Club',
+        header: 'Exploring the wonders of science',
         tags: {
-            category: 'Arts',
+            category: 'Science',
             status: 'Open',
-            type: 'Faculty'
+            type: 'University'
         },
         members: [
-            { name: 'Bob Brown', studentId: 'S12348' },
-            { name: 'Charlie Davis', studentId: 'S12349' },
-            { name: 'Diana Evans', studentId: 'S12350' }
+            { name: 'Michael Brown', studentId: 'S12348' },
+            { name: 'Emily Davis', studentId: 'S12349' },
+            { name: 'David Wilson', studentId: 'S12350' }
         ],
-        contacts: [
-            { name: 'Bob Brown', phone: '123-456-7893', email: 'bob@example.com' },
-            { name: 'Charlie Davis', phone: '123-456-7894', email: 'charlie@example.com' },
-            { name: 'Diana Evans', phone: '123-456-7895', email: 'diana@example.com' }
-        ]
+        contacts: {
+            ig: 'scienceclub',
+            line: 'scienceclub.line',
+            facebook: 'scienceclub.facebook'
+        }
     },
-    // Add more memos as needed
     {
         clubId: 'C003',
         date: '12/01/2024',
+        faculty: 'Faculty of Arts',
+        info: 'The Faculty of Arts offers a variety of programs in the humanities and social sciences.',
         imageURL: profile2,
-        name: 'Art Club',
-        header: 'Our art exhibition was a great success!',
+        name: 'Arts and Culture Club',
+        header: 'Celebrating arts and culture',
         tags: {
             category: 'Arts',
-            status: 'Closed',
-            type: 'Major'
+            status: 'Open',
+            type: 'University'
         },
         members: [
-            { name: 'Emily White', studentId: 'S12351' },
-            { name: 'Frank Green', studentId: 'S12352' },
-            { name: 'Grace Black', studentId: 'S12353' }
+            { name: 'Sarah Johnson', studentId: 'S12351' },
+            { name: 'James Lee', studentId: 'S12352' },
+            { name: 'Patricia Miller', studentId: 'S12353' }
         ],
-        contacts: [
-            { name: 'Emily White', phone: '123-456-7896', email: 'emily@example.com' },
-            { name: 'Frank Green', phone: '123-456-7897', email: 'frank@example.com' },
-            { name: 'Grace Black', phone: '123-456-7898', email: 'grace@example.com' }
-        ]
+        contacts: {
+            ig: 'artsclub',
+            line: 'artsclub.line',
+            facebook: 'artsclub.facebook'
+        }
     },
     {
         clubId: 'C004',
         date: '01/10/2025',
+        faculty: 'Faculty of Business',
+        info: 'The Faculty of Business offers programs in business administration, finance, and management.',
         imageURL: profile2,
-        name: 'Science Club',
-        header: 'Our science fair showcased incredible projects!',
+        name: 'Business Club',
+        header: 'Fostering business acumen',
         tags: {
-            category: 'Science',
+            category: 'Business',
             status: 'Open',
             type: 'University'
         },
         members: [
-            { name: 'Henry Blue', studentId: 'S12354' },
-            { name: 'Ivy Red', studentId: 'S12355' },
-            { name: 'Jack Yellow', studentId: 'S12356' }
+            { name: 'Robert Martinez', studentId: 'S12354' },
+            { name: 'Linda Anderson', studentId: 'S12355' },
+            { name: 'Barbara Thomas', studentId: 'S12356' }
         ],
-        contacts: [
-            { name: 'Henry Blue', phone: '123-456-7899', email: 'henry@example.com' },
-            { name: 'Ivy Red', phone: '123-456-7800', email: 'ivy@example.com' },
-            { name: 'Jack Yellow', phone: '123-456-7801', email: 'jack@example.com' }
-        ]
+        contacts: {
+            ig: 'businessclub',
+            line: 'businessclub.line',
+            facebook: 'businessclub.facebook'
+        }
     },
     {
         clubId: 'C005',
         date: '02/20/2025',
+        faculty: 'Faculty of Law',
+        info: 'The Faculty of Law offers programs in legal studies and law.',
         imageURL: profile2,
-        name: 'Drama Club',
-        header: 'The drama performance was a hit!',
+        name: 'Law Club',
+        header: 'Promoting legal knowledge',
         tags: {
-            category: 'Arts',
+            category: 'Law',
             status: 'Open',
-            type: 'Faculty'
+            type: 'University'
         },
         members: [
-            { name: 'Karen Purple', studentId: 'S12357' },
-            { name: 'Leo Orange', studentId: 'S12358' },
-            { name: 'Mia Pink', studentId: 'S12359' }
+            { name: 'William Harris', studentId: 'S12357' },
+            { name: 'Elizabeth Clark', studentId: 'S12358' },
+            { name: 'Christopher Lewis', studentId: 'S12359' }
         ],
-        contacts: [
-            { name: 'Karen Purple', phone: '123-456-7802', email: 'karen@example.com' },
-            { name: 'Leo Orange', phone: '123-456-7803', email: 'leo@example.com' },
-            { name: 'Mia Pink', phone: '123-456-7804', email: 'mia@example.com' }
-        ]
+        contacts: {
+            ig: 'lawclub',
+            line: 'lawclub.line',
+            facebook: 'lawclub.facebook'
+        }
     },
     {
         clubId: 'C006',
-        date: '03/05/2025',
+        date: '03/15/2025',
+        faculty: 'Faculty of Medicine',
+        info: 'The Faculty of Medicine offers programs in medical sciences and healthcare.',
         imageURL: profile2,
-        name: 'Literature Club',
-        header: 'We had a wonderful book reading session.',
+        name: 'Medical Club',
+        header: 'Advancing medical knowledge',
         tags: {
-            category: 'Arts',
-            status: 'Closed',
-            type: 'Major'
+            category: 'Medicine',
+            status: 'Open',
+            type: 'University'
         },
         members: [
-            { name: 'Nina Brown', studentId: 'S12360' },
-            { name: 'Oscar White', studentId: 'S12361' },
-            { name: 'Paul Black', studentId: 'S12362' }
+            { name: 'Joseph Walker', studentId: 'S12360' },
+            { name: 'Nancy Hall', studentId: 'S12361' },
+            { name: 'Karen Allen', studentId: 'S12362' }
         ],
-        contacts: [
-            { name: 'Nina Brown', phone: '123-456-7805', email: 'nina@example.com' },
-            { name: 'Oscar White', phone: '123-456-7806', email: 'oscar@example.com' },
-            { name: 'Paul Black', phone: '123-456-7807', email: 'paul@example.com' }
-        ]
+        contacts: {
+            ig: 'medicalclub',
+            line: 'medicalclub.line',
+            facebook: 'medicalclub.facebook'
+        }
     },
     {
         clubId: 'C007',
-        date: '04/12/2025',
+        date: '04/10/2025',
+        faculty: 'Faculty of Computer Science',
+        info: 'The Faculty of Computer Science offers programs in computer science and information technology.',
         imageURL: profile2,
-        name: 'Sports Club',
-        header: 'Our team won the inter-college championship!',
+        name: 'Computer Science Club',
+        header: 'Innovating with technology',
         tags: {
-            category: 'Sports',
+            category: 'Technology',
             status: 'Open',
             type: 'University'
         },
         members: [
-            { name: 'Quinn Blue', studentId: 'S12363' },
-            { name: 'Rachel Green', studentId: 'S12364' },
-            { name: 'Steve Yellow', studentId: 'S12365' }
+            { name: 'Daniel Young', studentId: 'S12363' },
+            { name: 'Jessica King', studentId: 'S12364' },
+            { name: 'Matthew Wright', studentId: 'S12365' }
         ],
-        contacts: [
-            { name: 'Quinn Blue', phone: '123-456-7808', email: 'quinn@example.com' },
-            { name: 'Rachel Green', phone: '123-456-7809', email: 'rachel@example.com' },
-            { name: 'Steve Yellow', phone: '123-456-7810', email: 'steve@example.com' }
-        ]
+        contacts: {
+            ig: 'csclub',
+            line: 'csclub.line',
+            facebook: 'csclub.facebook'
+        }
     },
     {
         clubId: 'C008',
-        date: '05/18/2025',
+        date: '05/05/2025',
+        faculty: 'Faculty of Environmental Science',
+        info: 'The Faculty of Environmental Science offers programs in environmental studies and sustainability.',
         imageURL: profile2,
-        name: 'Photography Club',
-        header: 'Our photo walk captured stunning images.',
+        name: 'Environmental Club',
+        header: 'Protecting our planet',
         tags: {
-            category: 'Arts',
-            status: 'Open',
-            type: 'Faculty'
-        },
-        members: [
-            { name: 'Tom Red', studentId: 'S12366' },
-            { name: 'Uma Purple', studentId: 'S12367' },
-            { name: 'Vera Orange', studentId: 'S12368' }
-        ],
-        contacts: [
-            { name: 'Tom Red', phone: '123-456-7811', email: 'tom@example.com' },
-            { name: 'Uma Purple', phone: '123-456-7812', email: 'uma@example.com' },
-            { name: 'Vera Orange', phone: '123-456-7813', email: 'vera@example.com' }
-        ]
-    },
-    {
-        clubId: 'C009',
-        date: '06/25/2025',
-        imageURL: profile2,
-        name: 'Cooking Club',
-        header: 'We had a fun and delicious cooking competition.',
-        tags: {
-            category: 'Arts',
-            status: 'Closed',
-            type: 'Major'
-        },
-        members: [
-            { name: 'Wendy Blue', studentId: 'S12369' },
-            { name: 'Xander Green', studentId: 'S12370' },
-            { name: 'Yara Yellow', studentId: 'S12371' }
-        ],
-        contacts: [
-            { name: 'Wendy Blue', phone: '123-456-7814', email: 'wendy@example.com' },
-            { name: 'Xander Green', phone: '123-456-7815', email: 'xander@example.com' },
-            { name: 'Yara Yellow', phone: '123-456-7816', email: 'yara@example.com' }
-        ]
-    },
-    {
-        clubId: 'C010',
-        date: '07/30/2025',
-        imageURL: profile2,
-        name: 'Robotics Club',
-        header: 'Our robots performed exceptionally well in the competition.',
-        tags: {
-            category: 'Science',
+            category: 'Environment',
             status: 'Open',
             type: 'University'
         },
         members: [
-            { name: 'Zane Black', studentId: 'S12372' },
-            { name: 'Amy White', studentId: 'S12373' },
-            { name: 'Brian Brown', studentId: 'S12374' }
+            { name: 'Paul Scott', studentId: 'S12366' },
+            { name: 'Mary Green', studentId: 'S12367' },
+            { name: 'Mark Adams', studentId: 'S12368' }
         ],
-        contacts: [
-            { name: 'Zane Black', phone: '123-456-7817', email: 'zane@example.com' },
-            { name: 'Amy White', phone: '123-456-7818', email: 'amy@example.com' },
-            { name: 'Brian Brown', phone: '123-456-7819', email: 'brian@example.com' }
-        ]
+        contacts: {
+            ig: 'envclub',
+            line: 'envclub.line',
+            facebook: 'envclub.facebook'
+        }
+    },
+    {
+        clubId: 'C009',
+        date: '06/20/2025',
+        faculty: 'Faculty of Education',
+        info: 'The Faculty of Education offers programs in education and teaching.',
+        imageURL: profile2,
+        name: 'Education Club',
+        header: 'Empowering future educators',
+        tags: {
+            category: 'Education',
+            status: 'Open',
+            type: 'University'
+        },
+        members: [
+            { name: 'Steven Baker', studentId: 'S12369' },
+            { name: 'Donna Gonzalez', studentId: 'S12370' },
+            { name: 'George Perez', studentId: 'S12371' }
+        ],
+        contacts: {
+            ig: 'educlub',
+            line: 'educlub.line',
+            facebook: 'educlub.facebook'
+        }
+    },
+    {
+        clubId: 'C010',
+        date: '07/15/2025',
+        faculty: 'Faculty of Music',
+        info: 'The Faculty of Music offers programs in music performance and theory.',
+        imageURL: profile2,
+        name: 'Music Club',
+        header: 'Celebrating musical talent',
+        tags: {
+            category: 'Music',
+            status: 'Open',
+            type: 'University'
+        },
+        members: [
+            { name: 'Brian Roberts', studentId: 'S12372' },
+            { name: 'Lisa Martinez', studentId: 'S12373' },
+            { name: 'Kevin Hernandez', studentId: 'S12374' }
+        ],
+        contacts: {
+            ig: 'musicclub',
+            line: 'musicclub.line',
+            facebook: 'musicclub.facebook'
+        }
     }
 ];

@@ -50,11 +50,10 @@
       <div class="flex flex-col space-y-2">
         <h2 class="text-2xl font-semibold">Contacts</h2>
         <ul>
-          {#each club.contacts as contact}
             <li>
-              {contact.name} - Phone: {contact.phone}, Email: {contact.email}
+              {club.contacts.ig} - Phone: {club.contacts.line}, Email: {club.contacts.facebook}
             </li>
-          {/each}
+
         </ul>
       </div>
     </div>
