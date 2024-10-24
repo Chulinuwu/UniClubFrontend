@@ -34,7 +34,7 @@
 
 		<Profile
 			{imageURL}
-			class="bg-white min-w-[120px] min-h[120px] w-auto h-auto rounded-md shadow-md"
+			class="bg-white min-w-[120px] min-h-[120px] max-h-[120px] max-w-[120px] w-auto h-auto rounded-md shadow-md"
 		/>
 	</div>
 </button>
