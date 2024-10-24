@@ -6,5 +6,5 @@
 
 <div class="w-full h-[100px] z-50 p-5 fixed bg-white flex items-center justify-between">
 	<div class=" flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
-	<a href="/notification" class="flex h-[40px]"><img src={notification} alt="notification" /></a>
+	<a href="/notification" class="flex h-[40px] min-h-[40px] min-w-10"><img src={notification} alt="notification" class="min-h-[40px]"/></a>
 </div>

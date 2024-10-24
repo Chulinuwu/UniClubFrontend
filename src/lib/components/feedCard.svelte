@@ -26,7 +26,7 @@
 	>
 		<div class="flex flex-col justify-between">
 			<div class="text-base text-start">{truncatedQuote}</div>
-			<div class="flex flex-col">
+			<div class="flex flex-col text-start">
 				<div class="text-sm text-uni-graytext">{relativeDate}</div>
 				<div class="text-sm text-uni-graytext">{truncatedName}</div>
 			</div>

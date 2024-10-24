@@ -56,7 +56,7 @@
 			<div class="w-full flex justify-start">
 				<div class="text-lg">Your clubs:</div>
 			</div>
-			<div class="flex flex-col gap-2.5">
+			<div class="flex flex-col gap-2.5 w-full">
 				{#each user.clubs as club}
 					<ClubCard
 						clubId={club.clubId}
