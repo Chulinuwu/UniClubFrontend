@@ -9,31 +9,35 @@ export const feedMemos = [
         date: '10/22/2024',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
-        header: 'Moodeng is born i am very happy to see Moodeng'
+        header: 'Moodeng is born i am very happy to see Moodeng',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F002',
-        clubId: 'C002',
+        clubId: 'C010',
         date: '11/15/2024',
         imageURL: profile2,
         name: 'Music Club',
-        header: 'We had an amazing concert last night!'
+        header: 'We had an amazing concert last night!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F003',
         clubId: 'C003',
         date: '12/01/2024',
         imageURL: profile2,
-        name: 'Art Club',
-        header: 'Our art exhibition was a great success!'
+        name: 'Arts and Culture Club',
+        header: 'Our art exhibition was a great success!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F004',
-        clubId: 'C004',
+        clubId: 'C002',
         date: '01/10/2025',
         imageURL: profile2,
         name: 'Science Club',
-        header: 'Our science fair showcased incredible projects!'
+        header: 'Our science fair showcased incredible projects!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F005',
@@ -41,7 +45,8 @@ export const feedMemos = [
         date: '02/20/2025',
         imageURL: profile2,
         name: 'Drama Club',
-        header: 'The drama performance was a hit!'
+        header: 'The drama performance was a hit!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F006',
@@ -49,7 +54,8 @@ export const feedMemos = [
         date: '03/05/2025',
         imageURL: profile2,
         name: 'Literature Club',
-        header: 'We had a wonderful book reading session.'
+        header: 'We had a wonderful book reading session.',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F007',
@@ -57,7 +63,8 @@ export const feedMemos = [
         date: '04/12/2025',
         imageURL: profile2,
         name: 'Sports Club',
-        header: 'Our team won the inter-college championship!'
+        header: 'Our team won the inter-college championship!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F008',
@@ -65,7 +72,8 @@ export const feedMemos = [
         date: '05/18/2025',
         imageURL: profile2,
         name: 'Photography Club',
-        header: 'Our photo walk captured stunning images.'
+        header: 'Our photo walk captured stunning images.',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F009',
@@ -73,7 +81,8 @@ export const feedMemos = [
         date: '06/25/2025',
         imageURL: profile2,
         name: 'Cooking Club',
-        header: 'We had a fun and delicious cooking competition.'
+        header: 'We had a fun and delicious cooking competition.',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F010',
@@ -81,7 +90,8 @@ export const feedMemos = [
         date: '07/30/2025',
         imageURL: profile2,
         name: 'Robotics Club',
-        header: 'Our robots performed exceptionally well in the competition.'
+        header: 'Our robots performed exceptionally well in the competition.',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F011',
@@ -89,7 +99,8 @@ export const feedMemos = [
         date: '10/22/2024',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
-        header: 'Moodeng is born i am very happy to see Moodeng'
+        header: 'Moodeng is born i am very happy to see Moodeng',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F012',
@@ -97,7 +108,8 @@ export const feedMemos = [
         date: '10/22/2024',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
-        header: 'Moodeng is born i am very happy to see Moodeng'
+        header: 'Moodeng is born i am very happy to see Moodeng',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F013',
@@ -105,7 +117,8 @@ export const feedMemos = [
         date: '10/22/2024',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
-        header: 'Moodeng is born i am very happy to see Moodeng'
+        header: 'Moodeng is born i am very happy to see Moodeng',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F014',
@@ -113,7 +126,8 @@ export const feedMemos = [
         date: '11/15/2024',
         imageURL: profile2,
         name: 'Music Club',
-        header: 'We had an amazing concert last night!'
+        header: 'We had an amazing concert last night!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F015',
@@ -121,7 +135,8 @@ export const feedMemos = [
         date: '11/15/2024',
         imageURL: profile2,
         name: 'Music Club',
-        header: 'We had an amazing concert last night!'
+        header: 'We had an amazing concert last night!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F016',
@@ -129,7 +144,8 @@ export const feedMemos = [
         date: '01/10/2025',
         imageURL: profile2,
         name: 'Science Club',
-        header: 'Our science fair showcased incredible projects!'
+        header: 'Our science fair showcased incredible projects!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F017',
@@ -137,7 +153,8 @@ export const feedMemos = [
         date: '01/10/2025',
         imageURL: profile2,
         name: 'Science Club',
-        header: 'Our science fair showcased incredible projects!'
+        header: 'Our science fair showcased incredible projects!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
     {
         feedId: 'F018',
@@ -145,7 +162,8 @@ export const feedMemos = [
         date: '02/20/2025',
         imageURL: profile2,
         name: 'Drama Club',
-        header: 'The drama performance was a hit!'
+        header: 'The drama performance was a hit!',
+        detail: 'i love moodeng detail i love moodeng detail i love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detaili love moodeng detail i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail  i love moodeng detail '
     },
 ];
 
