@@ -6,6 +6,7 @@
 	import ig from '$lib/icon/ig.svg';
 	import facebook from '$lib/icon/facebook.svg';
 	import line from '$lib/icon/line.svg';
+	import { goto } from '$app/navigation';
 
 	let selectedItem = 'Info';
 	export let data;
@@ -15,7 +16,10 @@
 		selectedItem = item;
 		console.log('Selected item:', item);
 	}
-
+	function handleNavigate(event: any) {
+		const { feedId } = event.detail;
+		goto(`/activity/${feedId}`);
+	}
 	console.log(club);
 </script>
 
@@ -47,10 +51,12 @@
 			<div class="p-5 mt-1 gap-2 flex flex-col">
 				{#each club.activity as activity}
 					<FeedCard
+						feedId={activity.feedId}
 						name={activity.name}
 						header={activity.header}
 						imageURL={activity.imageURL}
 						date={activity.date}
+						on:navigate = {handleNavigate}
 					/>
 				{/each}
 			</div>
