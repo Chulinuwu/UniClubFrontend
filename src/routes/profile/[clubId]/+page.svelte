@@ -11,7 +11,13 @@
     function toggleDetails(memberId: string) {
         activeMemberId = activeMemberId === memberId ? null : memberId;
     }
-
+    let mockMemo = {
+        club: club,
+        // other properties
+    };
+    function updateMockMemopage(newClubValue: any) {
+        mockMemo = { ...mockMemo, club: newClubValue };
+    }
 </script>
 
 {#if club}
