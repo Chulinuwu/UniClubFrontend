@@ -6,11 +6,17 @@
 	export let data;
 	const { club } = data;
 
+    let activeMemberId: string | null = null;
+
+    function toggleDetails(memberId: string) {
+        activeMemberId = activeMemberId === memberId ? null : memberId;
+    }
+
 </script>
 
 {#if club}
 <ProfileNavbar />
-<div class="flex w-full h-[200px] bg-slate-300"></div>
+<div class="flex w-full h-[100px]"></div>
 <div class="flex flex-col p-8">
     <div class="flex w-full h-auto gap-6 mb-4">
         <img src={club.imageURL} alt={club.name} class="w-28 h-28 max-w-[112px] max-h-[112px] object-cover shadow-lg rounded-xl" />
@@ -25,7 +31,7 @@
     <div class="flex flex-col gap-3">
         {#each club.members as member}
             {#if member.studentId !== 'S12345'}
-                <MemberCard name={member.name} role={member.role} imageURL={profile3} class="w-full" />
+                <MemberCard name={member.name} role={member.role} imageURL={profile3} editable={club.members.find((member) => member.studentId === 'S12345')?.role == 'Super Admin'? true: false} class="w-full" isActive={activeMemberId === member.studentId} on:toggleDetails={() => toggleDetails(member.studentId)} />
             {/if}
         {/each}
     </div>

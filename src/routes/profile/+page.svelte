@@ -37,7 +37,7 @@
 		</div>
 		<div class="flex w-1/2 h-0.5 bg-uni-red"></div>
 		<div class="text-lg">Your clubs:</div>
-		<div>
+		<div class="flex flex-col gap-2.5">
 			{#each user.clubs as club}
 			<ClubCard clubId={club.clubId} name={club.clubName} quote={club.clubDescription} imageURL={Profile} on:navigate={handleNavigate} />
 			{/each}
