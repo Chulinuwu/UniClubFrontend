@@ -2,7 +2,8 @@ import { clubMemos } from '../../../lib/mock/clubmemos';
 import { feedMemos } from '../../../lib/mock/feedmemos'; // Import feedMemos
 
 export async function load({ params }) {
-    const feedId = params.activityId;
+    const feedId = params.activityid;
+    console.log(feedId)
     const feed = feedMemos.find((memo) => memo.feedId === feedId);
     if(!feed){
         return { status: 404, error: new Error('Feed not found') };
