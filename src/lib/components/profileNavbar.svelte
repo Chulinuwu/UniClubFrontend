@@ -9,6 +9,6 @@
 	<button on:click={() => history.back()} class="flex h-[40px]"
 		><img src={back} alt="back" /></button
 	>
-	<div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
-	<div class="flex h-[40px]"><img src={notification} alt="notification" /></div>
+	<!-- <div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div> -->
+	<div class="flex h-[40px] min-w-10"><img src={notification} alt="notification" /></div>
 </div>

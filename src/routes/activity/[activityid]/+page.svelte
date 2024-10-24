@@ -26,9 +26,9 @@
         <div class="flex flex-col w-full h-auto text-center items-center"></div>
         <div class="p-5 flex flex-col w-full items-center mb-[100px]">
             <h1 class="text-3xl font-bold text-red-500">{feed.feed.header}</h1>
-            <h4 class="text-m font-bold text-black mt-2">{feed.name}</h4>
+            <h4 class="text-m font-bold text-black mt-3">{feed.name}</h4>
             <h4 class="text-m font-bold text-black">{feed.feed.date} at my home</h4>
-            <p class="text-sm font-blod text-gray-400 w-[80%] mt-3">{feed.feed.detail}</p>
+            <p class="text-sm font-blod text-gray-400 w-full mt-3">{feed.feed.detail}</p>
         </div>
 	</div>
 {/if}
