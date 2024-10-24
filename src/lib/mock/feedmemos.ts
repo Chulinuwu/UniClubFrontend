@@ -72,5 +72,61 @@ export const feedMemos = [
         imageURL: profile2,
         name: 'Robotics Club',
         header: 'Our robots performed exceptionally well in the competition.'
-    }
+    },
+    {
+        clubId: 'C001',
+        date: '10/22/2024',
+        imageURL: profile2,
+        name: 'CEDT Sandbox Clubbbb',
+        header: 'Moodeng is born i am very happy to see Moodeng'
+    },
+    {
+        clubId: 'C001',
+        date: '10/22/2024',
+        imageURL: profile2,
+        name: 'CEDT Sandbox Clubbbb',
+        header: 'Moodeng is born i am very happy to see Moodeng'
+    },
+    {
+        clubId: 'C001',
+        date: '10/22/2024',
+        imageURL: profile2,
+        name: 'CEDT Sandbox Clubbbb',
+        header: 'Moodeng is born i am very happy to see Moodeng'
+    },
+    {
+        clubId: 'C002',
+        date: '11/15/2024',
+        imageURL: profile2,
+        name: 'Music Club',
+        header: 'We had an amazing concert last night!'
+    },
+    {
+        clubId: 'C002',
+        date: '11/15/2024',
+        imageURL: profile2,
+        name: 'Music Club',
+        header: 'We had an amazing concert last night!'
+    },
+    {
+        clubId: 'C004',
+        date: '01/10/2025',
+        imageURL: profile2,
+        name: 'Science Club',
+        header: 'Our science fair showcased incredible projects!'
+    },
+    {
+        clubId: 'C004',
+        date: '01/10/2025',
+        imageURL: profile2,
+        name: 'Science Club',
+        header: 'Our science fair showcased incredible projects!'
+    },
+    {
+        clubId: 'C005',
+        date: '02/20/2025',
+        imageURL: profile2,
+        name: 'Drama Club',
+        header: 'The drama performance was a hit!'
+    },
 ];
