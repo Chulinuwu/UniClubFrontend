@@ -1,13 +1,18 @@
-import { userProfile } from '../../lib/mock/userMemos';
-
 export async function load({ params }) {
-	const userId = 'S12345';
+    const userId = 'S12345';
 
-	const user = userProfile.find((memo) => memo.userId === userId);
+    // Retrieve user data from localStorage
+    const userData = localStorage.getItem('userMemos');
+    if (!userData) {
+        return { status: 404, error: new Error('User data not found in localStorage') };
+    }
 
-	if (!user) {
-		return { status: 404, error: new Error('user not found') };
-	}
+    const userProfile = JSON.parse(userData);
+    const user = userProfile.find((memo: { userId: string; }) => memo.userId === userId);
 
-	return { user };
+    if (!user) {
+        return { status: 404, error: new Error('User not found') };
+    }
+
+    return { user };
 }

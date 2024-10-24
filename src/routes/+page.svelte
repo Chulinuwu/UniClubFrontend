@@ -4,13 +4,18 @@
 	import {clubMemos} from '$lib/mock/clubmemos';
 	import {feedMemos} from '$lib/mock/feedmemos';
 	import {userProfile} from '$lib/mock/userMemos';
-	// import type { ClubMemos } from '$lib/interface/interface';
+	import type { ClubMemos } from '$lib/interface/interface';
+	import type { User } from '$lib/interface/interface';
+	import type { FeedMemos } from '$lib/interface/interface';
+
 	import { onMount } from 'svelte';
 
 	
 
 
-	// let club: ClubMemos
+	let club: ClubMemos
+	let user1: User
+	let feed1: FeedMemos
 
         onMount(() => {
         const mockMemoString = JSON.stringify(clubMemos);
@@ -20,11 +25,18 @@
 		localStorage.setItem('feedMemos', feed);
 		localStorage.setItem('userMemos', user);
      
-        // const clubData = localStorage.getItem('clubMemos');
-        // if (clubData) {
-        //     club = JSON.parse(clubData);
-        //     console.log(club);
-        // }
+        let clubData = localStorage.getItem('clubMemos');
+		let feedData = localStorage.getItem('feedMemos');
+		let userData = localStorage.getItem('userMemos');
+        if (clubData) {
+			club = JSON.parse(clubData);
+        }
+		if (feedData) {
+            feed1 = JSON.parse(feedData);
+        }        
+		if (userData) {
+            user1 = JSON.parse(userData);
+        }
     });
   
 </script>

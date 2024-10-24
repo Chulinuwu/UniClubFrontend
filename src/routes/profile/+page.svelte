@@ -1,23 +1,34 @@
 <script lang="ts">
-	import ProfileNavbar from '$lib/components/profileNavbar.svelte';
-	import BottomNavbar from '$lib/components/bottomNavbar.svelte';
-	import ClubCard from '$lib/components/clubCard.svelte';
-	import Profile from '../../lib/images/profile2.jpg';
-	import { goto } from '$app/navigation';
+    import ProfileNavbar from '$lib/components/profileNavbar.svelte';
+    import BottomNavbar from '$lib/components/bottomNavbar.svelte';
+    import ClubCard from '$lib/components/clubCard.svelte';
+    import Profile from '../../lib/images/profile2.jpg';
+    import { goto } from '$app/navigation';
+    import { onMount } from 'svelte';
+    import { browser } from '$app/environment';
 
-	export let data;
-	const { user } = data;
+    let user: any = null;
+    const userId = 'S12345';
 
-	function handleNavigate(event: any) {
-		const { clubId } = event.detail;
-		goto(`profile/${clubId}`);
-	}
+    onMount(() => {
+        if (browser) {
+            const userData = localStorage.getItem('userMemos');
+            if (userData) {
+                const userProfile = JSON.parse(userData);
+                user = userProfile.find((memo: { userId: string }) => memo.userId === userId);
+                if (!user) {
+                    console.error('User not found');
+                }
+            } else {
+                console.error('User data not found in localStorage');
+            }
+        }
+    });
 
-	const storedclubMemosString = localStorage.getItem('clubMemos');
-	if (storedclubMemosString) {
-		const storedclubMemos = JSON.parse(storedclubMemosString);
-		console.log(storedclubMemos);
-	}
+    function handleNavigate(event: any) {
+        const { clubId } = event.detail;
+        goto(`profile/${clubId}`);
+    }
 </script>
 
 {#if user}

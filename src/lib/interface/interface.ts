@@ -32,5 +32,20 @@ export interface Feed {
     header: string;
 }
 
+export interface ClubUser {
+    clubId: string;
+    clubName: string;
+    clubDescription: string;
+    role: string;
+}
+
+export interface User {
+    userId: string;
+    imageURL: string;
+    name: string;
+    faculty: string;
+    clubs: Club[];
+}
+
 export type FeedMemos = Feed[];
 export type ClubMemos = Club[];

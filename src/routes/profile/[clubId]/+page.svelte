@@ -1,23 +1,31 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import ProfileNavbar from '$lib/components/profileNavbar.svelte';
 	import MemberCard from '$lib/components/memberCard.svelte';
 	import profile3 from '../../../lib/images/profile3.jpg';
+	import type { ClubMemos } from '$lib/interface/interface';
+	import { onMount } from 'svelte';
 
+	let clubs: ClubMemos
 	export let data;
-	const { club } = data;
+	const { id } = data;
+
+	onMount(() => {
+        const clubData = localStorage.getItem('clubMemos');
+        if (clubData) {
+            const clubs: ClubMemos[] = JSON.parse(clubData);
+  		  console.log(clubs);
+        }
+    });
 
 	let activeMemberId: string | null = null;
 
 	function toggleDetails(memberId: string) {
 		activeMemberId = activeMemberId === memberId ? null : memberId;
 	}
-	let mockMemo = {
-		club: club
-		// other properties
-	};
-	function updateMockMemopage(newClubValue: any) {
-		mockMemo = { ...mockMemo, club: newClubValue };
-	}
+
+	// function updateMockMemopage(newClubValue: any) {
+	// 	mockMemo = { ...mockMemo, club: newClubValue };
+	// }
 </script>
 
 {#if club}
@@ -60,4 +68,4 @@
 		</div>
 	</div>
 {/if}
-
+ -->
