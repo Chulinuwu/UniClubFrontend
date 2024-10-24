@@ -38,11 +38,11 @@
 </script>
 
 <div class="w-full h-[100px] z-50 p-5 fixed bg-white flex items-center justify-between">
-	<button on:click={navigateBack} class="flex h-[40px] items-center"
+	<button on:click={navigateBack} class="flex h-[40px] min-w-10 items-center"
 		><img src={back} alt="back" /></button
 	>
-	<div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
-	<div class="flex w-[40px] h-[50px]">
+	<!-- <div class="flex h-[50px] min-w-10"><img src={uniclub} alt="uniclub" /></div> -->
+	<div class="flex w-[40px] h-[50px] min-w-10">
 		<button on:click={toggleHeart} class="cursor-pointer">
 			<img
 				src={isHeartFull ? fullheart : strokeheart}

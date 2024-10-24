@@ -16,7 +16,7 @@
 </script>
 
 <button
-	class="{className} w-[380px] max-w-[380px] h-[100px] p-2 w-full rounded-md bg-uni-graybox flex gap-3"
+	class="{className} w-[380px] max-w-[380px] h-[100px] p-2  rounded-md bg-uni-graybox flex gap-3"
 	on:click={handleClick}
 >
 	<Profile {imageURL} class="bg-white w-[80px] h-[80px] min-w-[80px] rounded p-2 shadow-md" />
