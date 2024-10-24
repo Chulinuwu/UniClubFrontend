@@ -43,6 +43,16 @@ export const userProfile = [
 				clubDescription: 'Advancing medical knowledge',
 				role: 'User'
 			}
-		]
+		],
+        clubsFav: [
+            'C001',
+            'C002',
+            'C003'
+        ],
+        feedsFav: [
+            'F001',
+            'F002',
+            'F003'
+        ]
 	}
 ];
