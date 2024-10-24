@@ -2,6 +2,9 @@
 	import Profile from './profile.svelte';
 	import edit from './../icon/edit.svg';
 	import { createEventDispatcher } from 'svelte';
+	import { updateMemberRole } from '$lib/store/clubStore';
+	export let clubId = '';
+	export let studentId = '';
 	export let name = '';
 	export let role = '';
 	export let imageURL = '';
@@ -10,15 +13,21 @@
 	export let isActive = false;
 	export { className as class };
 
-	export let updateMockMemo = (e: string) => {
-		role = e;
-	};
 	let showDetails = false;
 	const dispatch = createEventDispatcher();
 
 	function toggleDetails() {
 		dispatch('toggleDetails');
 	}
+
+	async function changeRole(clubId: string, studentId: string, newRole: string) {
+        // Update the role in the store
+        await updateMemberRole(clubId, studentId, newRole);
+		// Emit an event to notify the parent component
+        dispatch('roleChanged', { studentId, newRole });
+        // Immediately update the local role variable to reflect the change in the UI
+        role = newRole;
+    }
 
 	$: truncatedName = name.length > 20 ? name.slice(0, 20) + '...' : name;
 </script>
@@ -48,7 +57,7 @@
 						<button
 							class="w-full"
 							type="button"
-							on:click={() => updateMockMemo('Super Admin')}
+							on:click={() => changeRole(clubId, studentId, 'Super Admin')}
 							class:text-uni-red={role === 'Super Admin'}
 							aria-label="Set role to Super Admin">Super Admin</button
 						>
@@ -57,7 +66,7 @@
 						<button
 							class="w-full"
 							type="button"
-							on:click={() => updateMockMemo('Admin')}
+							on:click={() => changeRole(clubId, studentId, 'Admin')}
 							class:text-uni-red={role === 'Admin'}
 							aria-label="Set role to Admin">Admin</button
 						>
@@ -66,7 +75,7 @@
 						<button
 							class="w-full"
 							type="button"
-							on:click={() => updateMockMemo('User')}
+							on:click={() => changeRole(clubId, studentId, 'User')}
 							class:text-uni-red={role === 'User'}
 							aria-label="Set role to User">User</button
 						>

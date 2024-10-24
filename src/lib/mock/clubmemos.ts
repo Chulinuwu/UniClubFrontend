@@ -1,6 +1,7 @@
+import type { Club } from '$lib/interface/interface';
 import profile2 from '../images/profile2.jpg';
 
-export const clubMemos = [
+export const clubMemos: Club[] = [
 	{
 		clubId: 'C001',
 		date: '10/22/2024',
