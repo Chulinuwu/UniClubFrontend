@@ -1,6 +1,32 @@
-<script type="ts">
+<script lang="ts">
 	import Uniclublogo from '$lib/images/Uniclub.png';
 	import Button from '$lib/components/button.svelte';
+	import {clubMemos} from '$lib/mock/clubmemos';
+	import {feedMemos} from '$lib/mock/feedmemos';
+	import {userProfile} from '$lib/mock/userMemos';
+	// import type { ClubMemos } from '$lib/interface/interface';
+	import { onMount } from 'svelte';
+
+	
+
+
+	// let club: ClubMemos
+
+        onMount(() => {
+        const mockMemoString = JSON.stringify(clubMemos);
+		const feed = JSON.stringify(feedMemos);        
+		const user = JSON.stringify(userProfile);
+		localStorage.setItem('clubMemos', mockMemoString);
+		localStorage.setItem('feedMemos', feed);
+		localStorage.setItem('userMemos', user);
+     
+        // const clubData = localStorage.getItem('clubMemos');
+        // if (clubData) {
+        //     club = JSON.parse(clubData);
+        //     console.log(club);
+        // }
+    });
+  
 </script>
 
 <div class="w-full h-full fixed flex flex-col justify-center items-center">

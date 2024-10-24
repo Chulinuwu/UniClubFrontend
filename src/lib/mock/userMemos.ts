@@ -46,7 +46,3 @@ export const userProfile = [
 		]
 	}
 ];
-
-const userMemosString = JSON.stringify(userProfile);
-
-localStorage.setItem('userMemos', userMemosString);

@@ -254,6 +254,4 @@ export const clubMemos = [
 	}
 ];
 
-const mockMemoString = JSON.stringify(clubMemos);
 
-localStorage.setItem('clubMemos', mockMemoString);

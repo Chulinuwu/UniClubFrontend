@@ -131,6 +131,3 @@ export const feedMemos = [
 	}
 ];
 
-const feedMemosString = JSON.stringify(feedMemos);
-
-localStorage.setItem('feedMemos', feedMemosString);
