@@ -9,6 +9,10 @@
 	export let className: string = '';
 	export let isActive = false;
 	export { className as class };
+
+	export let updateMockMemo = (e: string) => {
+		role = e;
+	};
 	let showDetails = false;
 	const dispatch = createEventDispatcher();
 
@@ -31,20 +35,48 @@
 	</div>
 	<div class="flex justify-center items-center">
 		{#if editable}
-			<img src={edit} alt="edit" on:click={toggleDetails} class="cursor-pointer" />
+			<button on:click={toggleDetails} class="cursor-pointer flex justify-center items-center">
+				<img src={edit} alt="edit" class="cursor-pointer" />
+			</button>
 		{/if}
-			{#if isActive}
-				<div class="absolute right-6 w-40 h-auto bg-white border border-uni-red px-5 py-2.5 rounded shadow-lg text-md ">
-					<div class="text-uni-graytext">
-						<div class:text-uni-red={role === 'Super Admin'}>Super Admin</div>
-						<div class:text-uni-red={role === 'Admin'}>Admin</div>
-						<div class:text-uni-red={role === 'User'}>User</div>
+		{#if isActive}
+			<div
+				class="absolute right-6 w-40 h-auto bg-white border border-uni-red px-5 py-2.5 rounded shadow-lg text-md"
+			>
+				<div class="text-uni-graytext flex flex-col items-start justify-start w-full">
+					<div>
+						<button
+							class="w-full"
+							type="button"
+							on:click={() => updateMockMemo('Super Admin')}
+							class:text-uni-red={role === 'Super Admin'}
+							aria-label="Set role to Super Admin">Super Admin</button
+						>
 					</div>
-					<div class="flex w-full h-px my-1 bg-uni-red"></div>
-					<div class="text-uni-red">Delete Member</div>
-					<div class="flex w-full h-px my-1 bg-uni-red"></div>
-					<div class="text-uni-red" on:click={toggleDetails}>Close</div>
+					<div>
+						<button
+							class="w-full"
+							type="button"
+							on:click={() => updateMockMemo('Admin')}
+							class:text-uni-red={role === 'Admin'}
+							aria-label="Set role to Admin">Admin</button
+						>
+					</div>
+					<div>
+						<button
+							class="w-full"
+							type="button"
+							on:click={() => updateMockMemo('User')}
+							class:text-uni-red={role === 'User'}
+							aria-label="Set role to User">User</button
+						>
+					</div>
 				</div>
-			{/if}
+				<div class="flex w-full h-px my-1 bg-uni-red"></div>
+				<div class="text-uni-red">Delete Member</div>
+				<div class="flex w-full h-px my-1 bg-uni-red"></div>
+				<button class="text-uni-red" on:click={toggleDetails}>Close</button>
+			</div>
+		{/if}
 	</div>
 </div>

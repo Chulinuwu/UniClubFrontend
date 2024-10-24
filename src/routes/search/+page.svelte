@@ -1,14 +1,14 @@
 <script lang="ts">
-    import Topnavbar from "$lib/components/Topnavbar.svelte";
-    import BottomNavbar from "$lib/components/bottomNavbar.svelte";
-    import FeedCard from "$lib/components/feedCard.svelte";
-    import { clubMemos as memos } from '$lib/mock/clubmemos';
-    import SearchBar from '$lib/components/searchBar.svelte';
-    import TabCapsule from '$lib/components/tabCapsule.svelte';
-    import  Clubcard from "$lib/components/clubCard.svelte"
-    import filterIcon from "$lib/icon/filter.svg";
-    import Modal from '$lib/components/modal.svelte';
-    import { goto } from '$app/navigation';
+	import Topnavbar from '$lib/components/Topnavbar.svelte';
+	import BottomNavbar from '$lib/components/bottomNavbar.svelte';
+	import FeedCard from '$lib/components/feedCard.svelte';
+	import { clubMemos as memos } from '$lib/mock/clubmemos';
+	import SearchBar from '$lib/components/searchBar.svelte';
+	import TabCapsule from '$lib/components/tabCapsule.svelte';
+	import Clubcard from '$lib/components/clubCard.svelte';
+	import filterIcon from '$lib/icon/filter.svg';
+	import Modal from '$lib/components/modal.svelte';
+	import { goto } from '$app/navigation';
 
 	let searchValue = '';
 	let selectedCategories: string[] = [];
@@ -74,18 +74,18 @@
 		isModalOpen = true;
 	}
 
-    function closeModal() {
-        isModalOpen = false;
-    }    
+	function closeModal() {
+		isModalOpen = false;
+	}
 
-    function getClubDetails(clubId: any) {
-        return memos.find(club => club.clubId === clubId);
-    }
+	function getClubDetails(clubId: any) {
+		return memos.find((club) => club.clubId === clubId);
+	}
 
-    function handleNavigate(event : any) {
-        const { clubId } = event.detail;
-        goto(`/clubs/${clubId}`);
-    }
+	function handleNavigate(event: any) {
+		const { clubId } = event.detail;
+		goto(`/clubs/${clubId}`);
+	}
 </script>
 
 <div class="w-full h-full">
@@ -109,35 +109,41 @@
         {/if} -->
 	</div>
 
-    <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div class="mt-3 font-bold">Category</div>
-        <div class="w-full h-3 "></div>
-        <div class="flex flex-wrap items-center gap-2">
-            {#each categoryTabs as tab, i}
-                <TabCapsule active={tab.active} label={tab.label} on:click={() => toggleCategory(i)} />
-            {/each}
-        </div>
-        <div class="mt-5 font-bold">Status Filter</div>
-        <div class="w-full h-3 "></div>
-        <div class="flex flex-wrap items-center gap-2">
-            {#each statusTabs as tab, i}
-                <TabCapsule active={tab.active} label={tab.label} on:click={() => toggleStatus(i)} />
-            {/each}
-        </div>
-        <div class="font-bold mt-4">Type</div>
-        <div class="w-full h-3 "></div>
-        <div class="flex flex-wrap items-center gap-2">
-            {#each typeTabs as tab, i}
-                <TabCapsule active={tab.active} label={tab.label} on:click={() => toggleType(i)} />
-            {/each}
-        </div>
-    </Modal>
-    <div class="w-full h-[95px]"></div>
-    <div class="p-5 gap-[10px]  flex flex-col w-full items-center mb-[100px]">
-        {#each filteredMemos as memo}
-      <Clubcard clubId={memo.clubId} name={memo.name} quote={memo.header} imageURL={memo.imageURL} on:navigate={handleNavigate} />
-        {/each}
-    </div>
+	<Modal isOpen={isModalOpen} onClose={closeModal}>
+		<div class="mt-3 font-bold">Category</div>
+		<div class="w-full h-3"></div>
+		<div class="flex flex-wrap items-center gap-2">
+			{#each categoryTabs as tab, i}
+				<TabCapsule active={tab.active} label={tab.label} on:click={() => toggleCategory(i)} />
+			{/each}
+		</div>
+		<div class="mt-5 font-bold">Status Filter</div>
+		<div class="w-full h-3"></div>
+		<div class="flex flex-wrap items-center gap-2">
+			{#each statusTabs as tab, i}
+				<TabCapsule active={tab.active} label={tab.label} on:click={() => toggleStatus(i)} />
+			{/each}
+		</div>
+		<div class="font-bold mt-4">Type</div>
+		<div class="w-full h-3"></div>
+		<div class="flex flex-wrap items-center gap-2">
+			{#each typeTabs as tab, i}
+				<TabCapsule active={tab.active} label={tab.label} on:click={() => toggleType(i)} />
+			{/each}
+		</div>
+	</Modal>
+	<div class="w-full h-[95px]"></div>
+	<div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
+		{#each filteredMemos as memo}
+			<Clubcard
+				clubId={memo.clubId}
+				name={memo.name}
+				quote={memo.header}
+				imageURL={memo.imageURL}
+				on:navigate={handleNavigate}
+			/>
+		{/each}
+	</div>
 
 	<BottomNavbar />
 </div>

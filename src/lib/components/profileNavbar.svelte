@@ -6,7 +6,9 @@
 </script>
 
 <div class="w-full h-[100px] p-5 fixed z-50 bg-white flex items-center justify-between">
-	<button on:click={() => history.back()} class="flex h-[40px]"><img src={back} alt="back" /></button>
+	<button on:click={() => history.back()} class="flex h-[40px]"
+		><img src={back} alt="back" /></button
+	>
 	<div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
 	<div class="flex h-[40px]"><img src={notification} alt="notification" /></div>
 </div>

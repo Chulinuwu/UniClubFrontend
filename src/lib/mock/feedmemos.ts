@@ -1,6 +1,6 @@
 // src/lib/mock/feedmemos.ts
 
-import profile2 from '$lib/images/profile2.jpg'
+import profile2 from '$lib/images/profile2.jpg';
 
 export const feedMemos = [
     {
@@ -148,3 +148,4 @@ export const feedMemos = [
         header: 'The drama performance was a hit!'
     },
 ];
+
