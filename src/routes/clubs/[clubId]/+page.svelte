@@ -34,7 +34,7 @@
 				class="w-60 max-w-[240px] max-h-[240px] h-60 object-cover shadow-lg rounded-xl"
 			/>
 		</div>
-		<div class="flex flex-col mb-[10px] w-full h-auto text-center items-center mt-28">
+		<div class="flex flex-col mb-[10px] w-full h-auto text-center items-center mt-[155px]">
 			<h1 class="text-xl font-bold text-black">{club.name}</h1>
 			<p class="text-base text-uni-graytext">{club.header}</p>
 			<div class="flex w-1/2 h-0.5 mt-4 bg-uni-red"></div>
