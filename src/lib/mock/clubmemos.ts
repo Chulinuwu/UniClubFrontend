@@ -5,7 +5,7 @@ export const clubMemos = [
         clubId: 'C001',
         date: '10/22/2024',
         faculty: 'Faculty of Engineering',
-        info: 'The Faculty of Engineering is one of the largest faculties in the University of Moratuwa. It offers undergraduate and postgraduate programs in a wide range of engineering disciplines.',
+        info: 'The Faculty of Engineeriasdas dsssssss sssssss sssssssss sssssssss sssssd sedasdas asdasdas ng is one of the largest faculties in the University of Moratuwa. It offers undergraduate and postgraduate programs in a wide range of engineering disciplines.',
         imageURL: profile2,
         name: 'CEDT Sandbox Clubbbb',
         header: 'Moodeng is born i am very happy to see Moodeng',
