@@ -33,7 +33,7 @@
 
 <div>
 	<div class="w-full h-[100px]"></div>
-	<div class="relative flex w-full h-[256px] ">
+	<div class="relative flex w-full h-[256px]">
 		<button
 			class="absolute left-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer transition-all"
 			on:click={handleLeftClick}
@@ -50,7 +50,7 @@
 			{/each}
 		</div>
 		<button
-			class="absolute right-5 top-1/2  transform -translate-y-1/2 z-10 cursor-pointer transition-all"
+			class="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer transition-all"
 			on:click={handleRightClick}
 		>
 			<img src={RightArrow} alt="Right Arrow" />

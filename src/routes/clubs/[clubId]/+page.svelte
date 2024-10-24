@@ -3,9 +3,9 @@
 	import clubbg from '../../../lib/images/clubbg.png';
 	import TabClub from '$lib/components/tabClub.svelte';
 	import FeedCard from '$lib/components/feedCard.svelte';
-    import ig from '$lib/icon/ig.svg';
-    import facebook from '$lib/icon/facebook.svg';
-    import line from '$lib/icon/line.svg';
+	import ig from '$lib/icon/ig.svg';
+	import facebook from '$lib/icon/facebook.svg';
+	import line from '$lib/icon/line.svg';
 
 	let selectedItem = 'Info';
 	export let data;
@@ -56,20 +56,20 @@
 			</div>
 		{/if}
 		{#if selectedItem === 'Contacts'}
-        <div class="p-5 mt-1 gap-2 flex flex-col">
-            <div class ="flex gap-2 items-center justify-center">
-                <img src={ig} alt="ig">
-                <p class="text-uni-red">{club.contacts.ig}</p>
-            </div>
-            <div class ="flex gap-2 items-center justify-center">
-                <img src={facebook} alt="facebook">
-                <p class="text-uni-red">{club.contacts.facebook}</p>
-            </div>
-            <div class ="flex gap-2 items-center justify-center">
-                <img src={line} alt="ig">
-                <p class="text-uni-red">{club.contacts.line}</p>
-            </div>
-        </div>
+			<div class="p-5 mt-1 gap-2 flex flex-col">
+				<div class="flex gap-2 items-center justify-center">
+					<img src={ig} alt="ig" />
+					<p class="text-uni-red">{club.contacts.ig}</p>
+				</div>
+				<div class="flex gap-2 items-center justify-center">
+					<img src={facebook} alt="facebook" />
+					<p class="text-uni-red">{club.contacts.facebook}</p>
+				</div>
+				<div class="flex gap-2 items-center justify-center">
+					<img src={line} alt="ig" />
+					<p class="text-uni-red">{club.contacts.line}</p>
+				</div>
+			</div>
 		{/if}
 		<div class="flex mt-10"></div>
 		<div class="flex mt-10"></div>

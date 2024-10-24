@@ -1,4 +1,4 @@
-export async function load({params}){
-    const message =  "hello world!";
-    return 
+export async function load({ params }) {
+	const message = 'hello world!';
+	return;
 }
