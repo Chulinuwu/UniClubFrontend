@@ -1,14 +1,35 @@
 <script lang="ts">
 	import back from '../icon/back.svg';
-	import uniclub from '../images/uniclub.png';
+	import uniclub from '../images/Uniclub.png';
 	import strokeheart from '../icon/strokeheart.svg';
 	import fullheart from '../icon/fullheart.svg';
 	import { goto } from '$app/navigation';
+	import { userStore } from '$lib/store/userStore';
+	import { insertFavoriteClubOfUser } from '$lib/store/userStore';
+	import { removeFavoriteClubOfUser } from '$lib/store/userStore'
 
 	let isHeartFull = false;
 
+	export let clubId: string | undefined; // Accept clubId as a prop
+	console.log("clubId from ClubNavbar:", clubId); // You can use clubId here
+	// Check if the club is already favorited
+	if (clubId != undefined) {
+		isHeartFull = $userStore[0].clubsFav.includes(clubId);
+	}
+
 	function toggleHeart() {
 		isHeartFull = !isHeartFull;
+		
+		if (clubId != undefined) {
+			// You can also make an API call to update the favorite status
+			if (isHeartFull) {
+				// Add to favorites
+				insertFavoriteClubOfUser($userStore[0].userId, clubId);
+			} else {
+				// Remove from favorites
+				removeFavoriteClubOfUser($userStore[0].userId, clubId);
+			}
+		}
 	}
 
 	function navigateBack() {
