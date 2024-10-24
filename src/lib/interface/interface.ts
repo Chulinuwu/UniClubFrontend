@@ -25,6 +25,7 @@ export interface Club {
 }
 
 export interface Feed {
+    feedId: string;
     clubId: string;
     date: string;
     imageURL: string;
@@ -45,6 +46,8 @@ export interface User {
     name: string;
     faculty: string;
     clubs: Club[];
+    clubsFav: string[];
+    feedsFav: string[];
 }
 
 export type FeedMemos = Feed[];

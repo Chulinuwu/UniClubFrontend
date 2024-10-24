@@ -1,6 +1,6 @@
 <script lang="ts">
 	import back from '../icon/back.svg';
-	import uniclub from '../images/uniclub.png';
+	import uniclub from '../images/Uniclub.png';
 	import notification from '../icon/notification.svg';
 	import { goto } from '$app/navigation';
 </script>
