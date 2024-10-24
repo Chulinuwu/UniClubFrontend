@@ -1,8 +1,16 @@
 <script lang="ts">
     import ClubNavbar from '$lib/components/ClubNavbar.svelte';
     import clubbg from '../../../lib/images/clubbg.png';
+    import TabClub from '$lib/components/tabClub.svelte';
+
+    
     export let data;
     const { club } = data;
+
+    function handleSelect(item: string) {
+        console.log('Selected item:', item);
+    }
+
 </script>
 
 <ClubNavbar />
@@ -19,10 +27,11 @@
         <div class="flex flex-col w-full h-auto text-center items-center mt-28">
       <h1 class="text-xl font-bold text-black">{club.name}</h1>
       <p class="text-base text-uni-graytext">{club.header}</p>
-      <div class="flex w-1/2 h-0.5 my-4 bg-uni-red"></div>
+      <div class="flex w-1/2 h-0.5 mt-4 bg-uni-red"></div>
     </div>
-    <div class="flex w-full h-[100px] bg-slate-300"></div>
-      <div class="flex flex-col space-y-2">
+    <TabClub  onSelect={handleSelect} />
+
+      <!-- <div class="flex flex-col space-y-2">
         <h2 class="text-2xl font-semibold">Tags</h2>
         <p><strong>Category:</strong> {club.tags.category}</p>
         <p><strong>Status:</strong> {club.tags.status}</p>
@@ -36,7 +45,7 @@
             <li>{member.name} (ID: {member.studentId})</li>
           {/each}
         </ul>
-      </div>
+      </div> -->
     
       <div class="flex flex-col space-y-2">
         <h2 class="text-2xl font-semibold">Contacts</h2>
