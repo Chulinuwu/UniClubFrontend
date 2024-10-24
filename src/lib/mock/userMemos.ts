@@ -13,6 +13,16 @@ export const userProfile = [
             { clubId: 'C004', clubName: 'Business Club', clubDescription: 'Fostering business acumen' , role: 'User' },
             { clubId: 'C005', clubName: 'Law Club', clubDescription: 'Promoting legal knowledg' , role: 'Super Admin' },
             { clubId: 'C006', clubName: 'Medical Club', clubDescription: 'Advancing medical knowledge' , role: 'User' },
+        ],
+        clubsFav: [
+            'C001',
+            'C002',
+            'C003'
+        ],
+        feedsFav: [
+            'F001',
+            'F002',
+            'F003'
         ]
     },
 ];
