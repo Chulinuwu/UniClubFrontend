@@ -7,8 +7,7 @@
 	import type { ClubMemos } from '$lib/interface/interface';
 	import type { User } from '$lib/interface/interface';
 	import type { FeedMemos } from '$lib/interface/interface';
-
-	import { onMount } from 'svelte';
+import { onMount } from 'svelte';
 
 	
 
