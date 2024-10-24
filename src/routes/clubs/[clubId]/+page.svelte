@@ -13,6 +13,8 @@
 		console.log('Selected item:', item);
 	}
 
+    console.log(club)
+
 </script>
 
 <ClubNavbar />
@@ -40,16 +42,18 @@
 			<p class="p-5 mt-1">{club.info}</p>
 		{/if}
 		{#if selectedItem === 'Activity'}
-        {#each club.activity as activity (activity.clubId)}
-        <div class="p-5 mt-1">
+        <div class="p-5 mt-1 gap-2 flex flex-col">
+        {#each club.activity as activity }
+
             <FeedCard
             name={activity.name}
             header={activity.header}
             imageURL={activity.imageURL}
             date={activity.date}
         />
-        </div>
+
     {/each}
+</div>
 		{/if}
 		{#if selectedItem === 'Contacts'}
 			<p class="p-5 mt-1">Contacts content goes here</p>
