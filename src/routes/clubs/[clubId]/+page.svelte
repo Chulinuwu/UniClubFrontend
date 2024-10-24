@@ -47,7 +47,7 @@
 		<div
 	class="w-full h-[100px] max-w-[100vw] p-5  bottom-0  flex items-center justify-between"
 >
-<div class="w-full h-full bg-uni-red rounded-full"></div>
+<div class="w-full h-full bg-uni-red rounded-full flex justify-center items-center text-white ">Join</div>
 </div>
 	</div>
 {/if}
