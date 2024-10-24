@@ -1,73 +1,9 @@
-<script type="ts">
+<script lang="ts">
 	import Topnavbar from '$lib/components/Topnavbar.svelte';
 	import BottomNavbar from '$lib/components/bottomNavbar.svelte';
+	import ClubCard from '$lib/components/clubCard.svelte';
 	import FeedCard from '$lib/components/feedCard.svelte';
-	import profile2 from '$lib/images/profile2.jpg';
-	import profile3 from '$lib/images/profile3.jpg';
-	import profile4 from '$lib/images/profile4.jpg';
-
-	// const memos = [
-	// 	{
-	// 		date: '10/22/2024',
-	// 		imageURL: profile2,
-	// 		name: 'CEDT Sandbox Clubbbb',
-	// 		header: 'Moodeng is born i am very happy to see Moodeng'
-	// 	},
-	// 	{
-	// 		date: '11/15/2024',
-	// 		imageURL: profile2,
-	// 		name: 'Music Club',
-	// 		header: 'We had an amazing concert last night!'
-	// 	},
-	// 	{
-	// 		date: '12/01/2024',
-	// 		imageURL: profile2,
-	// 		name: 'Art Club',
-	// 		header: 'Our art exhibition was a great success!'
-	// 	},
-	// 	{
-	// 		date: '01/10/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Science Club',
-	// 		header: 'Our science fair showcased incredible projects!'
-	// 	},
-	// 	{
-	// 		date: '02/20/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Drama Club',
-	// 		header: 'The drama performance was a hit!'
-	// 	},
-	// 	{
-	// 		date: '03/05/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Literature Club',
-	// 		header: 'We had a wonderful book reading session.'
-	// 	},
-	// 	{
-	// 		date: '04/12/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Sports Club',
-	// 		header: 'Our team won the inter-college championship!'
-	// 	},
-	// 	{
-	// 		date: '05/18/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Photography Club',
-	// 		header: 'Our photo walk captured stunning images.'
-	// 	},
-	// 	{
-	// 		date: '06/25/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Cooking Club',
-	// 		header: 'We had a fun and delicious cooking competition.'
-	// 	},
-	// 	{
-	// 		date: '07/30/2025',
-	// 		imageURL: profile2,
-	// 		name: 'Robotics Club',
-	// 		header: 'Our robots performed exceptionally well in the competition.'
-	// 	}
-	// ];
+	import { goto } from '$app/navigation';
 
 	export let data;
 	const { clubsFav, feedsFav } = data;
@@ -78,8 +14,19 @@
 	// Fetch clubsFav by default
 	let memos = clubsFav;
 
+	function handleNavigate(event: any) {
+		const { clubId } = event.detail;
+		goto(`/clubs/${clubId}`);
+	}
+
+	function handleNavigate2(event: any) {
+		const { feedId } = event.detail;
+		goto(`/activity/${feedId}`);
+		// console.log(feedId);
+	}
+
 	// Function to handle tab switching
-	function handleTabClick(section) {
+	function handleTabClick(section: string) {
 		activeSection = section;
 		if (section === 'club') {
 			memos = clubsFav;
@@ -91,25 +38,42 @@
 
 <div class="w-full h-full">
 	<Topnavbar />
-
+	<div class="w-full h-[100px]"></div>
 	<!-- Section switcher for Club and Activity -->
-	<div class="w-full h-[300px] bg-red-300 flex justify-center items-center text-center gap-5">
-		<div class={`cursor-pointer ${activeSection === 'club' ? 'font-bold' : ''}`} 
-			on:click={() => handleTabClick('club')}>
+	<div class="w-full h-auto  flex justify-between px-12 items-center text-center gap-5">
+		<button
+			class={`cursor-pointer ${activeSection === 'club' ? 'text-uni-red font-bold underline-offset-2' : ''}`}
+			on:click={() => handleTabClick('club')}
+		>
 			Club
-		</div>
-		<div class={`cursor-pointer ${activeSection === 'activity' ? 'font-bold' : ''}`} 
-			on:click={() => handleTabClick('activity')}>
+		</button>
+		<button
+			class={`cursor-pointer ${activeSection === 'activity' ? 'text-uni-red font-bold underline-offset-2' : ''}`}
+			on:click={() => handleTabClick('activity')}
+		>
 			Activity
-		</div>
+		</button>
 	</div>
 
 	<!-- Render data based on the active section -->
 	<div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
-		{#each memos as memo}
-			{memo}
-			<!-- <FeedCard date={memo.date} imageURL={memo.imageURL} name={memo.name} header={memo.header} /> -->
-		{/each}
+		{#if activeSection === 'activity'}
+			{#each memos as memo}
+				<FeedCard on:navigate={handleNavigate2}
+				feedId={memo.feedId} date={memo.date} imageURL={memo.imageURL} name={memo.name} header={memo.header} />
+			{/each}
+		{/if}
+		{#if activeSection === 'club'}
+			{#each memos as memo}
+				<ClubCard
+					clubId={memo.clubId}
+					name={memo.name}
+					quote={memo.header}
+					imageURL={memo.imageURL}
+					on:navigate={handleNavigate}
+				/>
+			{/each}
+		{/if}
 	</div>
 
 	<BottomNavbar />
