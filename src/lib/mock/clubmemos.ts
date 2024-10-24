@@ -18,6 +18,13 @@ export const clubMemos = [
             { name: 'Jirameth Wannasiwaporn', studentId: 'S12345' , role:'Super Admin' },
             { name: 'Jane Smith', studentId: 'S12346', role:'Admin' },
             { name: 'Alice Johnson', studentId: 'S12347' , role:'User'},
+            { name: 'Jane Smith', studentId: 'S12344', role:'Super Admin' },
+            { name: 'Jane Smith', studentId: 'S12348', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12349' , role:'User'},
+            { name: 'Jane Smith', studentId: 'S12340', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12341' , role:'User'},
+            { name: 'Jane Smith', studentId: 'S12342', role:'Admin' },
+            { name: 'Alice Johnson', studentId: 'S12343' , role:'User'},
         ],
         contacts: {
             ig: 'cusandbox',
