@@ -79,39 +79,5 @@
             </div>
         </div>
         <BottomNavbar />
-
-        <!-- Fixed rounded button -->
-        <button 
-            on:click={() => showModal.set(true)} 
-            class="fixed bottom-20 right-8 w-16 h-16 rounded-full bg-uni-red text-2xl text-white shadow-lg hover:bg-red-600 flex items-center justify-center">
-            +
-        </button>
-
-        <!-- Modal -->
-        {#if $showModal}
-            <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                <div class="bg-white rounded-lg p-8 max-w-sm w-full">
-                    <h2 class="text-xl font-semibold mb-4">Enter a string</h2>
-                    <input 
-                        type="text" 
-                        bind:value={$inputString} 
-                        placeholder="Enter text..." 
-                        class="w-full border border-gray-300 rounded-lg p-2 mb-4" 
-                    />
-                    <div class="flex justify-end gap-4">
-                        <button 
-                            on:click={() => showModal.set(false)} 
-                            class="py-2 px-4 bg-gray-300 rounded-lg">
-                            Cancel
-                        </button>
-                        <button 
-                            on:click={handleSubmit} 
-                            class="py-2 px-4 bg-uni-red text-white rounded-lg">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </div>
-        {/if}
     </div>
 {/if}
