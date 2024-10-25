@@ -16,7 +16,9 @@
 <div class="w-full h-[100px] z-50 p-5 fixed bg-white flex items-center justify-between">
 	<div class=" flex h-[50px]"><img src={uniclub} alt="uniclub" /></div>
 	{#if showNotification}
+	<button on:click={()=>history.back()}>
 		<img src={strokeNotification} alt="notification" class="min-h-[40px]"/>
+	</button>
 	{:else}
 		<a href="/notification" class="flex h-[40px] min-h-[px] min-w-8 max-w-8 items-center justify-center">
 			<img src={notification} alt="notification" class="min-h-[40px]"/>
