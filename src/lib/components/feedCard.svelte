@@ -22,7 +22,7 @@
 
 <button on:click={handleClick}>	
 	<div
-		class="{className} max-w-[400px] h-[150px] p-3 w-full rounded-md bg-uni-graybox flex justify-between gap-2"
+		class="{className} max-w-[400px] min-w-[390px] min h-[150px] p-3 w-full rounded-md bg-uni-graybox flex justify-between gap-2"
 	>
 		<div class="flex flex-col justify-between">
 			<div class="text-base text-start">{truncatedQuote}</div>
