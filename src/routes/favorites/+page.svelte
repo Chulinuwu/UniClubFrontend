@@ -64,7 +64,7 @@
             feedId={memo.feedId} date={memo.date} imageURL={memo.imageURL} name={memo.name} header={memo.header} />
         {/each}
     {:else}
-        <p class="mt-5">No items have been added to the favorite section yet.</p>
+        <p class="mt-5 px-5">No items have been added to the favorite section yet.</p>
     {/if}
 {/if}
 {#if activeSection === 'club'}
@@ -79,7 +79,7 @@
             />
         {/each}
     {:else}
-        <p class="mt-5">No items have been added to the favorite section yet.</p>
+        <p class="mt-5 px-5">No items have been added to the favorite section yet.</p>
     {/if}
 {/if}
 	</div>
