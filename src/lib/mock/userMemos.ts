@@ -46,5 +46,51 @@ export const userProfile = [
 		],
         clubsFav: [],
         feedsFav: []
+	},
+	{
+		userId: 'S0001',
+		imageURL: profile3,
+		name: 'Ampli',
+		faculty: 'Faculty of Science',
+		clubs: [
+			{
+				clubId: 'C001',
+				clubName: 'CEDT Sandbox Clubbbb',
+				clubDescription: 'I love Moodeng jub jub eiei',
+				role: 'Super Admin'
+			},
+			{
+				clubId: 'C002',
+				clubName: 'Science Club',
+				clubDescription: 'Exploring the wonders of science',
+				role: 'Admin'
+			},
+			{
+				clubId: 'C003',
+				clubName: 'Arts and Culture Club',
+				clubDescription: 'Celebrating arts and culture',
+				role: 'Admin'
+			},
+			{
+				clubId: 'C004',
+				clubName: 'Business Club',
+				clubDescription: 'Fostering business acumen',
+				role: 'User'
+			},
+			{
+				clubId: 'C005',
+				clubName: 'Law Club',
+				clubDescription: 'Promoting legal knowledg',
+				role: 'Super Admin'
+			},
+			{
+				clubId: 'C006',
+				clubName: 'Medical Club',
+				clubDescription: 'Advancing medical knowledge',
+				role: 'User'
+			}
+		],
+        clubsFav: [],
+        feedsFav: []
 	}
 ];

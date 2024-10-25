@@ -2,7 +2,8 @@
 	import Profile from './profile.svelte';
 	import edit from './../icon/edit.svg';
 	import { createEventDispatcher } from 'svelte';
-	import { updateMemberRole } from '$lib/store/clubStore';
+	import { updateMemberRole, deleteMember } from '$lib/store/clubStore';
+	import { clubStore } from '$lib/store/clubStore';
 	export let clubId = '';
 	export let studentId = '';
 	export let name = '';
@@ -27,6 +28,14 @@
         dispatch('roleChanged', { studentId, newRole });
         // Immediately update the local role variable to reflect the change in the UI
         role = newRole;
+    }
+
+	function removeMember() {
+        deleteMember(clubId, studentId);
+        toggleDetails(); // Close the details panel if open
+		clubStore.subscribe(value => {
+			location.reload();
+		});
     }
 
 	$: truncatedName = name.length > 20 ? name.slice(0, 20) + '...' : name;
@@ -82,7 +91,7 @@
 					</div>
 				</div>
 				<div class="flex w-full h-px my-1 bg-uni-red"></div>
-				<div class="text-uni-red">Delete Member</div>
+				<button class="text-uni-red" on:click={removeMember}>Delete Member</button>
 				<div class="flex w-full h-px my-1 bg-uni-red"></div>
 				<button class="text-uni-red" on:click={toggleDetails}>Close</button>
 			</div>
