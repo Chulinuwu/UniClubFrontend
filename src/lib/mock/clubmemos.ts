@@ -43,7 +43,7 @@ export const clubMemos: Club[] = [
 		header: 'Exploring the wonders of science',
 		tags: {
 			category: 'Science',
-			status: 'Open',
+			status: 'Closed',
 			type: 'University'
 		},
 		members: [
