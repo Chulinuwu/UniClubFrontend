@@ -20,9 +20,11 @@
 	>
 	<!-- <div class="flex h-[50px]"><img src={uniclub} alt="uniclub" /></div> -->
 	{#if showNotification}
+	<div class="flex w-[40px] h-[50px] min-w-7 max-w-7">
 	<button on:click={()=>history.back()}>
 		<img src={strokeNotification} alt="notification" class="min-h-[40px]"/>
 	</button>
+	</div>
 	{:else}
 		<a href="/notification" class="flex h-[40px] min-h-[px] min-w-8 max-w-8 items-center justify-center">
 			<img src={notification} alt="notification" class="min-h-[40px]"/>
