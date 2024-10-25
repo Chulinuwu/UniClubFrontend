@@ -58,22 +58,30 @@
 	<!-- Render data based on the active section -->
 	<div class="p-5 gap-[10px] flex flex-col w-full items-center mb-[100px]">
 		{#if activeSection === 'activity'}
-			{#each memos as memo}
-				<FeedCard on:navigate={handleNavigate2}
-				feedId={memo.feedId} date={memo.date} imageURL={memo.imageURL} name={memo.name} header={memo.header} />
-			{/each}
-		{/if}
-		{#if activeSection === 'club'}
-			{#each memos as memo}
-				<ClubCard
-					clubId={memo.clubId}
-					name={memo.name}
-					quote={memo.header}
-					imageURL={memo.imageURL}
-					on:navigate={handleNavigate}
-				/>
-			{/each}
-		{/if}
+    {#if memos.length > 0}
+        {#each memos as memo}
+            <FeedCard on:navigate={handleNavigate2}
+            feedId={memo.feedId} date={memo.date} imageURL={memo.imageURL} name={memo.name} header={memo.header} />
+        {/each}
+    {:else}
+        <p class="mt-5">No items have been added to the favorite section yet.</p>
+    {/if}
+{/if}
+{#if activeSection === 'club'}
+    {#if memos.length > 0}
+        {#each memos as memo}
+            <ClubCard
+                clubId={memo.clubId}
+                name={memo.name}
+                quote={memo.header}
+                imageURL={memo.imageURL}
+                on:navigate={handleNavigate}
+            />
+        {/each}
+    {:else}
+        <p class="mt-5">No items have been added to the favorite section yet.</p>
+    {/if}
+{/if}
 	</div>
 
 	<BottomNavbar />
