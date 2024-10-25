@@ -38,7 +38,7 @@
 
 <div class="w-full h-full">
 	<Topnavbar />
-	<div class="w-full h-[100px]"></div>
+	<div class="w-full h-[120px]"></div>
 	<!-- Section switcher for Club and Activity -->
 	<div class="w-full h-auto  flex justify-between px-12 items-center text-center gap-5">
 		<button
