@@ -104,11 +104,13 @@
 			{/each}
 		</div>
 		<!-- Fixed rounded button -->
-        <button 
-            on:click={() => showModal.set(true)} 
-            class="fixed bottom-20 right-8 w-16 h-16 rounded-full bg-uni-red text-2xl text-white shadow-lg hover:bg-red-600 flex items-center justify-center">
-            +
-        </button>
+		{#if club.members.find((member) => member.studentId === 'S12345')?.role == 'Super Admin'}
+			<button 
+				on:click={() => showModal.set(true)} 
+				class="fixed bottom-20 right-8 w-16 h-16 rounded-full bg-uni-red text-2xl text-white shadow-lg hover:bg-red-600 flex items-center justify-center">
+				+
+			</button>
+		{/if}
 
         <!-- Modal -->
         {#if $showModal}
